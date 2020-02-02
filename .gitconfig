@@ -1,0 +1,15 @@
+[user]
+	email = contact@bminusl.xyz
+	name = Bryton Lacquement
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	who = shortlog -sne
+	undo = reset --soft HEAD^
+	unstage = reset HEAD
+	amend = commit --amend
+	dic = diff --cached
+	oneline = log --pretty=oneline --abbrev-commit --graph --decorate

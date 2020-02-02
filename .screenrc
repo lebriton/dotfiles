@@ -1,0 +1,17 @@
+# start at window 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+
+# informative statusbar
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{=b kg}%S: %=%{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{= .w}"%H" %C %A %D %M-%d'
+
+startup_message off
+altscreen on
+
+# scrollback
+termcapinfo * ti@:te@
+defscrollback 10000
