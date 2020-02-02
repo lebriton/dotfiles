@@ -15,6 +15,9 @@ HISTCONTROL=ignoreboth
 # Enable history appending instead of overwriting.
 shopt -s histappend
 
+HISTSIZE=10000
+HISTFILESIZE=200000
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
