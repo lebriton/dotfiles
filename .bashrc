@@ -20,6 +20,10 @@ HISTFILESIZE=200000
 
 stty -ixon # Disable ctrl-s and ctrl-q
 
+# Moving around
+shopt -s autocd
+function -() { cd -; }
+
 # Alias definitions
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
