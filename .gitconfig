@@ -13,3 +13,10 @@
 	amend = commit --amend
 	dic = diff --cached
 	oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+	br = branch
+	di = diff
+	sh = show
+	rb = rebase
+	rbi = rebase -i
+	rbc = rebase --continue
+	rba = rebase --abort
