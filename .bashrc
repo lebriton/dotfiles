@@ -130,6 +130,7 @@ shopt -s autocd
 function -() { cd -; }
 
 export EDITOR=vim
+export PATH=$PATH:$HOME/bin
 
 parse_git () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/' | xargs echo -n ''
