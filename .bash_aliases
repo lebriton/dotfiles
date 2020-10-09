@@ -5,3 +5,7 @@ alias rm="rm -i"
 alias ln="ln -i"
 
 alias mkdir='mkdir -pv'
+
+bak() {
+  cp "$1" "$1.bak"
+}
