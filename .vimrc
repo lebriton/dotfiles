@@ -32,7 +32,7 @@ nmap ;; i;;
 " |_|    \__, |\__|_| |_|\___/|_| |_|
 "        |___/
 " PYTHON PYTHON PYTHON PYTHON PYTHON PYTHON PYTHON PYTHON PYTHON PYTHON PYTHON P
-autocmd FileType python :setlocal sw=2 ts=2 sts=2
+autocmd FileType python :setlocal sw=4 ts=4 sts=4
 autocmd FileType python inoremap ;* *args, **kwargs
 autocmd FileType python inoremap ;class class :<Enter>def __init__(self, <++>):<Enter><++><Esc>2k$i
 autocmd FileType python inoremap ;env #!/usr/bin/env python
