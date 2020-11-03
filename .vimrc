@@ -1,5 +1,6 @@
 set nocompatible
 
+
 " Display
 filetype plugin indent on
 syntax on
@@ -9,6 +10,7 @@ set showmatch
 highlight ColorColumn cterm=reverse ctermbg=black
 set colorcolumn=81
 set laststatus=2
+set cursorline
 
 " Indentation
 set autoindent
