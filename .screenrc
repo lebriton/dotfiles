@@ -15,3 +15,7 @@ altscreen on
 # scrollback
 termcapinfo * ti@:te@
 defscrollback 10000
+
+# j to move down a window, k to move up. Like teh VIM!
+bind j focus down
+bind k focus up
