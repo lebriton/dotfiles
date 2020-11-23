@@ -21,5 +21,6 @@
 	rbc = rebase --continue
 	rba = rebase --abort
 	fx = !sh -c 'git commit -m \"This fixes commit $(git rev-parse $1).\" --fixup \"$@\"' -
+	dit = difftool --dir-diff
 [diff]
 	tool = kompare
