@@ -19,3 +19,7 @@ install .bashrc
 install .gitconfig
 install .screenrc
 install .vimrc
+
+echo '#####'
+echo "Don't forget to modify '~/.gitconfig user.email', if necessary!"
+echo '#####'
