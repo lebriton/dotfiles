@@ -7,7 +7,7 @@ screen 1
 # informative statusbar
 hardstatus off
 hardstatus alwayslastline
-hardstatus string "%{kw}%-w%{wr}%n %t%{-}%+w"
+hardstatus string "%{kw}%S: %-w%{wr}%n %t%{-}%+w"
 
 startup_message off
 altscreen on
