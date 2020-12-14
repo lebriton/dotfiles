@@ -20,6 +20,11 @@ set smartindent
 set smarttab
 set softtabstop=2
 
+" Search
+set hlsearch    " highlight all search results
+set ignorecase  " do case insensitive search
+set incsearch   " show incremental search results as you type
+
 
 " Edit the next '<++>'
 inoremap ;; <Esc>/<++><Enter>"_c4l
