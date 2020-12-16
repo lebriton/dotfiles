@@ -131,6 +131,7 @@ stty -ixon # Disable ctrl-s and ctrl-q
 
 export EDITOR=vim
 export PATH=$PATH:$HOME/bin
+export JD_HOME=~/Documents/jd
 
 parse_git () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/' | xargs echo -n ''
