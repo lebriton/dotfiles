@@ -18,7 +18,7 @@ install .bash_aliases
 install .bashrc
 install .gitconfig
 install .screenrc
-install .vimrc
+install .SpaceVim.d
 
 echo '#####'
 echo "Don't forget to modify '~/.gitconfig user.email', if necessary!"
