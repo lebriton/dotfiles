@@ -27,9 +27,10 @@
     statusline_unicode_symbols = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
-    enable_vimfiler_gitstatus = true
     bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
+    filemanager = "nerdtree"
+    filetree_direction = "left"
 
 # Enable autocomplete layer
 [[layers]]
@@ -54,3 +55,11 @@ default_height = 30
 [[custom_plugins]]
   repo = "tomasiser/vim-code-dark"
   merged = 0
+
+[[custom_plugins]]
+  repo = "Xuyuanp/nerdtree-git-plugin"
+  merged = 0
+
+[[layers]]
+  name = 'core'
+  filetree_show_hidden = true
