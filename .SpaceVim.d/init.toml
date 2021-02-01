@@ -27,14 +27,26 @@
     statusline_unicode_symbols = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
+    enable_vimfiler_gitstatus = true
+    bootstrap_before = 'myspacevim#before'
+    bootstrap_after = 'myspacevim#after'
 
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
+auto_completion_return_key_behavior = "smart"
 auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
 name = 'shell'
-default_position = 'top'
+default_position = 'bottom'
 default_height = 30
+
+[[layers]]
+  name = "colorscheme"
+
+[[layers]]
+  name = "VersionControl"
+
+[[layers]]
+  name = "lang#python"
