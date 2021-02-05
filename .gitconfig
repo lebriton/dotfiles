@@ -23,5 +23,6 @@
 	fx = !sh -c 'git commit -m \"This fixes commit $(git rev-parse $1).\" --fixup \"$@\"' -
 	dit = difftool --dir-diff
 	wip = commit -am WIP --no-verify
+	frbi = "!f() { git rebase -i $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1)^ ; }; f"
 [diff]
 	tool = kompare
