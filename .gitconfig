@@ -24,5 +24,6 @@
 	dit = difftool --dir-diff
 	wip = commit -am WIP --no-verify
 	frbi = "!f() { git rebase -i $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1)^ ; }; f"
+	sw = !git checkout $(git branch -a --format '%(refname:short)' | sed 's~origin/~~' | sort | uniq | fzf)
 [diff]
 	tool = kompare
