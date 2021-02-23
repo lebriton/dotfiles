@@ -11,3 +11,6 @@ function! myspacevim#before() abort
 
   let g:spacevim_lint_on_save = 0
 endfunction
+
+function! myspacevim#after() abort
+endfunction
