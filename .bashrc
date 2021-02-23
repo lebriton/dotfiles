@@ -130,15 +130,6 @@ stty -ixon # Disable ctrl-s and ctrl-q
 #function -() { cd -; }
 
 export EDITOR=vim
-export PATH=$PATH:$HOME/bin
-export JD_HOME=~/Documents/jd
-
-parse_git () {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/' | xargs echo -n ''
-  git stash list 2> /dev/null | wc -l | tr -d '0' | xargs echo -n ''
-}
-
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;33m\]$(parse_git)\[\033[00m\]\$ '
 
 export PATH="$HOME/.local/bin:$PATH"
 
