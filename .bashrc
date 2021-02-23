@@ -134,3 +134,6 @@ export EDITOR=vim
 export PATH="$HOME/.local/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1="\$(__git_ps1 '(%s) ')$PS1"
