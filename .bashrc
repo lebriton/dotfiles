@@ -116,18 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# # #
-
-#shopt -s expand_aliases
+# ---------------------------------------------------------------------------- #
 
 # Enable globbing for hidden files
 shopt -s dotglob
 
 stty -ixon # Disable ctrl-s and ctrl-q
-
-# Moving around
-#shopt -s autocd
-#function -() { cd -; }
 
 export EDITOR=vim
 
