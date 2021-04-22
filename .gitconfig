@@ -26,6 +26,6 @@
 	frbi = "!f() { git rebase -i $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1)^ ; }; f"
 	sw = !git checkout $(git branch -a --format '%(refname:short)' | sed 's~origin/~~' | sort | uniq | fzf)
 	fsh = "!f() { git sh $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1) ; }; f"
-	aa = commit --amend -a
+	aa = commit --amend -a --no-edit
 [diff]
 	tool = kompare
