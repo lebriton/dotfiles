@@ -9,3 +9,5 @@ alias mkdir='mkdir -pv'
 bak() {
   cp "$1" "$1.bak"
 }
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
