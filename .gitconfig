@@ -21,11 +21,8 @@
 	rbc = rebase --continue
 	rba = rebase --abort
 	fx = !sh -c 'git commit -m \"This fixes commit $(git rev-parse $1).\" --fixup \"$@\"' -
-	dit = difftool --dir-diff
 	wip = commit -am WIP --no-verify
 	frbi = "!f() { git rebase -i $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1)^ ; }; f"
 	sw = !git checkout $(git branch -a --format '%(refname:short)' | sed 's~origin/~~' | sort | uniq | fzf)
 	fsh = "!f() { git sh $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1) ; }; f"
 	aa = commit --amend -a --no-edit
-[diff]
-	tool = kompare
