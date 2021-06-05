@@ -126,6 +126,8 @@ stty -ixon # Disable ctrl-s and ctrl-q
 export EDITOR=vim
 
 export PATH="$HOME/.local/bin:$PATH"
+# Add Rust to $PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
