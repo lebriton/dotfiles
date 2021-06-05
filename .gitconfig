@@ -3,7 +3,6 @@
 	name = Bryton Lacquement
 [core]
 	editor = vim
-	pager = git-split-diffs --color | less -RFX
 [alias]
 	co = checkout
 	ci = commit
@@ -27,5 +26,3 @@
 	sw = !git checkout $(git branch -a --format '%(refname:short)' | sed 's~origin/~~' | sort | uniq | fzf)
 	fsh = "!f() { git sh $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1) ; }; f"
 	aa = commit --amend -a --no-edit
-[split-diffs]
-	wrap-lines = true
