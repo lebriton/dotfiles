@@ -134,3 +134,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="\$(__git_ps1 '(%s) ')$PS1"
+
+xinput disable "PS/2 Generic Mouse"
