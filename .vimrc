@@ -78,7 +78,6 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
-
 "   ____ _ _
 "  / ___(_) |_
 " | |  _| | __|
