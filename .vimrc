@@ -17,7 +17,6 @@ set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 set laststatus=2        " always display the status line
 " display a bar after 80 chararcters
-highlight ColorColumn cterm=reverse ctermbg=black
 set colorcolumn=81
 
 " Searching
