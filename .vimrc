@@ -124,8 +124,13 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabm -1<CR>
 nnoremap <silent> <A-Right> :tabm +1<CR>
-" open each buffer in its own tabpage
-au BufAdd,BufNewFile * nested tab sball
+nnoremap <C-W> :tabclose<CR>
+
+" Better controls
+nnoremap <c-s> :w<cr>
+nnoremap <c-q> :qa<cr>
+nnoremap <c-t> :tabnew<cr>
+nnoremap <c-o> :o<space>
 
 " Add mouse support
 set mouse=a
