@@ -119,6 +119,17 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" Tabs shorcuts
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :tabm -1<CR>
+nnoremap <silent> <A-Right> :tabm +1<CR>
+" open each buffer in its own tabpage
+au BufAdd,BufNewFile * nested tab sball
+
+" Add mouse support
+set mouse=a
+
 "   ____ _ _
 "  / ___(_) |_
 " | |  _| | __|
