@@ -1,5 +1,39 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
+let g:indent_guides_guide_size = 1
+Plugin 'tomasiser/vim-code-dark'
+Plugin 'thaerkh/vim-workspace'
+let g:workspace_autocreate = 1
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
+Plugin 'vim-airline/vim-airline'
+let g:airline_theme = 'codedark'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 " Colors
-"colorscheme badwolf    " awesome colorscheme
+colorscheme codedark    " awesome colorscheme
 syntax enable           " enable syntax processing
 
 " Spaces & Tabs
