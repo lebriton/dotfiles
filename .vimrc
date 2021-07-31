@@ -29,6 +29,7 @@ Plugin 'junegunn/fzf.vim'
 
 " --- others ---
 Plugin 'tpope/vim-surround'
+Plugin 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
