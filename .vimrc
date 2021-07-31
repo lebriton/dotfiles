@@ -14,14 +14,13 @@ Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
-let g:indent_guides_guide_size = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
 Plugin 'tomasiser/vim-code-dark'
-Plugin 'thaerkh/vim-workspace'
-let g:workspace_autocreate = 1
-let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 Plugin 'vim-airline/vim-airline'
 let g:airline_theme = 'codedark'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,6 +34,10 @@ filetype plugin indent on    " required
 " Colors
 colorscheme codedark    " awesome colorscheme
 syntax enable           " enable syntax processing
+
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 " Spaces & Tabs
 set tabstop=4           " number of visual spaces per TAB
@@ -119,21 +122,33 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-" Tabs shorcuts
+" Tabs shortcuts
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabm -1<CR>
 nnoremap <silent> <A-Right> :tabm +1<CR>
-nnoremap <C-W> :tabclose<CR>
 
 " Better controls
 nnoremap <c-s> :w<cr>
-nnoremap <c-q> :qa<cr>
+inoremap <c-s> <esc>:w<cr>
 nnoremap <c-t> :tabnew<cr>
-nnoremap <c-o> :o<space>
+nnoremap <c-w> :q<cr>
+" from fzf
+nnoremap <c-o> :Files<cr>
+nnoremap <c-f> :BLines<cr>
 
 " Add mouse support
 set mouse=a
+
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
 
 "   ____ _ _
 "  / ___(_) |_
