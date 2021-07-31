@@ -11,8 +11,11 @@
 	undo = reset --soft HEAD^
 	unstage = reset HEAD
 	amend = commit --amend
+	a     = commit --amend
+	aa = commit --amend -a --no-edit
 	dic = diff --cached
 	oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+	ol      = log --pretty=oneline --abbrev-commit --graph --decorate
 	br = branch
 	di = diff
 	sh = show
@@ -25,4 +28,3 @@
 	frbi = "!f() { git rebase -i $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1)^ ; }; f"
 	sw = !git checkout $(git branch -a --format '%(refname:short)' | sed 's~origin/~~' | sort | uniq | fzf)
 	fsh = "!f() { git sh $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1) ; }; f"
-	aa = commit --amend -a --no-edit
