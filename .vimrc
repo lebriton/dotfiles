@@ -9,18 +9,26 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround'
+
+" --- making Vim look good ---
+Plugin 'tomasiser/vim-code-dark'
 Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
-Plugin 'tomasiser/vim-code-dark'
 Plugin 'vim-airline/vim-airline'
 let g:airline_theme = 'codedark'
+
+" --- working with Git ---
 Plugin 'airblade/vim-gitgutter'
+
+" --- working with Fzf ---
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+
+" --- others ---
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,8 +61,7 @@ set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 set laststatus=2        " always display the status line
-" display a bar after 80 characters
-set colorcolumn=81
+set colorcolumn=81      " display a bar after 80 characters
 
 " Searching
 set incsearch           " search as characters are entered
