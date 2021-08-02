@@ -12,6 +12,3 @@ bak() {
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias d='dotfiles'
-
-# fix vim colors in gnu screen
-alias screen='TERM=xterm-256color screen'
