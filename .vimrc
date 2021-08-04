@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 " --- making Vim look good ---
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'itchyny/lightline.vim'
+Plugin 'Yggdroot/indentLine'
 
 " --- working with Git ---
 Plugin 'airblade/vim-gitgutter'
@@ -30,8 +31,14 @@ filetype plugin indent on
 set mouse=a
 
 " Colors
+set t_Co=256
+set t_ut=
 colorscheme codedark    " awesome colorscheme
 syntax enable           " enable syntax processing
+
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 " Spaces & Tabs
 set tabstop=4           " number of visual spaces per TAB
