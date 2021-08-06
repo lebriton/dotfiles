@@ -21,6 +21,7 @@ Plugin 'junegunn/fzf.vim'
 " --- others ---
 Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
+Plugin 'mhinz/vim-startify'
 
 call vundle#end()
 filetype plugin indent on
