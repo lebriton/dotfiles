@@ -80,3 +80,23 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 noremap <silent> <C-S> :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
+
+" Better tabs navigation
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :tabm -1<CR>
+nnoremap <silent> <A-Right> :tabm +1<CR>
+nnoremap <C-T> :tabnew<CR>
+
+" Better window splits navigation
+:nmap <silent> <C-h> :wincmd h<CR>
+:nmap <silent> <C-j> :wincmd j<CR>
+:nmap <silent> <C-k> :wincmd k<CR>
+:nmap <silent> <C-l> :wincmd l<CR>
+nnoremap <C-i> :vnew<CR>
+set splitbelow
+set splitright
+
+" Easier shortcuts
+nnoremap <C-W> :q<CR>
+nnoremap <C-Q> :qa!<CR>
