@@ -41,9 +41,9 @@ highlight GitGutterChange guifg=#bbbb00 ctermfg=3
 highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 " Spaces & Tabs
-set tabstop=4           " number of visual spaces per TAB
-set softtabstop=4       " number of spaces in tab when editing
-set expandtab           " tabs are spaces
+set expandtab           " insert spaces when tab is pressed
+set tabstop=2           " insert x spaces when tab is pressed
+set shiftwidth=2        " change the number of space characters inserted for indentation
 
 " UI Config
 set number              " show line numbers
