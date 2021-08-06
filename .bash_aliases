@@ -12,3 +12,5 @@ bak() {
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias d='dotfiles'
+alias v='vim'
+alias g='git'
