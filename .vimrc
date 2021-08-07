@@ -101,3 +101,7 @@ set splitright
 " Easier shortcuts
 nnoremap <C-W> :q<CR>
 nnoremap <C-Q> :qa!<CR>
+
+" Disable quote concealing in JSON files (by the indentLine plugin)
+autocmd Filetype json
+  \ let g:indentLine_setConceal = 0
