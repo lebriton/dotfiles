@@ -9,10 +9,9 @@ Plugin 'VundleVim/Vundle.vim'
 " --- making Vim look good ---
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'itchyny/lightline.vim'
-Plugin 'Yggdroot/indentLine'
 
 " --- working with Git ---
-Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-signify'
 
 " --- working with Fzf ---
 Plugin 'junegunn/fzf'
@@ -36,10 +35,6 @@ set t_Co=256
 set t_ut=
 colorscheme codedark    " awesome colorscheme
 syntax enable           " enable syntax processing
-
-highlight GitGutterAdd    guifg=#009900 ctermfg=2
-highlight GitGutterChange guifg=#bbbb00 ctermfg=3
-highlight GitGutterDelete guifg=#ff2222 ctermfg=1
 
 " Spaces & Tabs
 set expandtab           " insert spaces when tab is pressed
@@ -79,8 +74,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Save with Ctrl-S
 noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <C-C>:update<CR>
-inoremap <silent> <C-S> <C-O>:update<CR>
+vnoremap <silent> <C-S> <esc>:update<CR>
+inoremap <silent> <C-S> <esc>:update<CR>
 
 " Better tabs navigation
 nnoremap <C-Left> :tabprevious<CR>
@@ -102,6 +97,36 @@ set splitright
 nnoremap <C-W> :q<CR>
 nnoremap <C-Q> :qa!<CR>
 
-" Disable quote concealing in JSON files (by the indentLine plugin)
-autocmd Filetype json
-  \ let g:indentLine_setConceal = 0
+" --- Plugin 'mhinz/vim-startify' ---
+" returns all modified files of the current git repo
+" `2>/dev/null` makes the command fail quietly, so that when we are not
+" in a git repo, the list will be empty
+function! s:gitModified()
+    let files = systemlist('git ls-files -m 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+" same as above, but show untracked files, honouring .gitignore
+function! s:gitUntracked()
+    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+let g:startify_lists = [
+        \ { 'type': 'files',     'header': ['   MRU']            },
+        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
+        \ { 'type': 'commands',  'header': ['   Commands']       },
+        \ ]
+
+let g:startify_custom_header = startify#pad([
+      \'       _',
+      \'__   _(_)_ __ ___',
+      \'\ \ / / | ''_ ` _ \',
+      \' \ V /| | | | | | |',
+      \'  \_/ |_|_| |_| |_|',
+      \'',
+      \ ])
