@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 " --- making Vim look good ---
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'itchyny/lightline.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " --- working with Git ---
 Plugin 'mhinz/vim-signify'
@@ -21,6 +22,10 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mhinz/vim-startify'
+
+" --- distraction-free editing ---
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -97,6 +102,18 @@ set splitright
 nnoremap <C-W> :q<CR>
 nnoremap <C-Q> :qa!<CR>
 
+" Autorefresh files when modified externally
+set autoread
+" Triger `autoread` when files changes on disk
+" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+  \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+" Notification after file change
+" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
 " --- Plugin 'mhinz/vim-startify' ---
 " returns all modified files of the current git repo
 " `2>/dev/null` makes the command fail quietly, so that when we are not
@@ -113,20 +130,13 @@ function! s:gitUntracked()
 endfunction
 
 let g:startify_lists = [
+        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'files',     'header': ['   MRU']            },
         \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
         \ { 'type': 'sessions',  'header': ['   Sessions']       },
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
-        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
-let g:startify_custom_header = startify#pad([
-      \'       _',
-      \'__   _(_)_ __ ___',
-      \'\ \ / / | ''_ ` _ \',
-      \' \ V /| | | | | | |',
-      \'  \_/ |_|_| |_| |_|',
-      \'',
-      \ ])
+let g:startify_custom_header = ''
