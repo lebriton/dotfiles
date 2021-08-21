@@ -15,12 +15,11 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'preservim/tagbar'
 Plugin 'preservim/nerdtree'
 
+" --- completion ---
+Plugin 'ervandew/supertab'
+
 " --- working with Git ---
 Plugin 'mhinz/vim-signify'
-
-" --- working with Fzf ---
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
 
 " --- others ---
 Plugin 'tpope/vim-surround'
