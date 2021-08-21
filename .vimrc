@@ -22,6 +22,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mhinz/vim-startify'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " --- distraction-free editing ---
 Plugin 'junegunn/goyo.vim'
@@ -79,22 +80,21 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Save with Ctrl-S
 noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <esc>:update<CR>
-inoremap <silent> <C-S> <esc>:update<CR>
+vnoremap <silent> <C-S> <ESC>:update<CR>
+inoremap <silent> <C-S> <ESC>:update<CR>
 
 " Better tabs navigation
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <C-Left> :tabprevious<CR>
+nnoremap <silent> <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :tabm -1<CR>
 nnoremap <silent> <A-Right> :tabm +1<CR>
-nnoremap <C-T> :tabnew<CR>
+nnoremap <silent> <C-T> :tabnew<CR>
 
 " Better window splits navigation
-:nmap <silent> <C-h> :wincmd h<CR>
-:nmap <silent> <C-j> :wincmd j<CR>
-:nmap <silent> <C-k> :wincmd k<CR>
-:nmap <silent> <C-l> :wincmd l<CR>
-"nnoremap <C-i> :vnew<CR> " Ctrl-Tab is the default
+nnoremap <silent> <C-H> :wincmd h<CR>
+nnoremap <silent> <C-J> :wincmd j<CR>
+nnoremap <silent> <C-K> :wincmd k<CR>
+nnoremap <silent> <C-L> :wincmd l<CR>
 set splitbelow
 set splitright
 
