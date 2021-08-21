@@ -11,6 +11,10 @@ Plugin 'tomasiser/vim-code-dark'
 Plugin 'itchyny/lightline.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 
+" --- navigation ---
+Plugin 'preservim/tagbar'
+Plugin 'preservim/nerdtree'
+
 " --- working with Git ---
 Plugin 'mhinz/vim-signify'
 
@@ -73,7 +77,7 @@ set dir=/tmp
 
 " Use persistent undo files
 set undodir=/tmp
-set undofile"
+set undofile
 
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
