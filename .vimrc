@@ -18,6 +18,9 @@ Plugin 'preservim/nerdtree'
 " --- completion ---
 Plugin 'ervandew/supertab'
 
+" --- comments ---
+Plugin 'preservim/nerdcommenter'
+
 " --- working with Git ---
 Plugin 'mhinz/vim-signify'
 
