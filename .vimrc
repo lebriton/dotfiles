@@ -64,6 +64,17 @@ set showmatch           " highlight matching [{()}]
 set laststatus=2        " always display the status line
 set noshowmode          " get rid of '-- INSERT --'
 
+" Moving
+set scrolloff=3         " Minumum lines to keep above and below cursor
+" visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+" treat long lines as break lines (useful when moving around in them)
+nmap j gj
+nmap k gk
+vmap j gj
+vmap k gk
+
 " Searching
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
@@ -105,8 +116,11 @@ set splitbelow
 set splitright
 
 " Easier shortcuts
-nnoremap <C-W> :q<CR>
-nnoremap <C-Q> :qa!<CR>
+nnoremap <silent> <C-W> :q<CR>
+nnoremap <silent> <C-Q> :qa!<CR>
+nnoremap <silent> <F1> :NERDTreeToggle<CR>
+nnoremap <silent> <F2> :TagbarToggle<CR>
+nnoremap <silent> <F3> :Goyo<CR>
 
 " Autorefresh files when modified externally
 set autoread
@@ -146,3 +160,8 @@ let g:startify_lists = [
         \ ]
 
 let g:startify_custom_header = ''
+
+" --- Plugin 'junegunn/limelight.vim' ---
+let g:limelight_conceal_ctermfg = 'gray'
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
