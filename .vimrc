@@ -8,18 +8,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 " --- making Vim look good ---
 Plugin 'tomasiser/vim-code-dark'
-Plugin 'itchyny/lightline.vim'
+"Plugin 'itchyny/lightline.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 
 " --- navigation ---
 Plugin 'preservim/tagbar'
-Plugin 'preservim/nerdtree'
 
 " --- completion ---
 Plugin 'ervandew/supertab'
-
-" --- comments ---
-Plugin 'preservim/nerdcommenter'
 
 " --- working with Git ---
 Plugin 'mhinz/vim-signify'
@@ -28,7 +24,6 @@ Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mhinz/vim-startify'
-Plugin 'ctrlpvim/ctrlp.vim'
 
 " --- distraction-free editing ---
 Plugin 'junegunn/goyo.vim'
@@ -43,6 +38,7 @@ filetype plugin indent on
 set mouse=a
 
 " Colors
+" fix colors when inside GNU/screen
 set t_Co=256
 set t_ut=
 colorscheme codedark    " awesome colorscheme
@@ -60,9 +56,6 @@ set showcmd             " show command in bottom bar
 filetype indent on      " load filetype-specific indent files
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
-set showmatch           " highlight matching [{()}]
-set laststatus=2        " always display the status line
-set noshowmode          " get rid of '-- INSERT --'
 
 " Moving
 set scrolloff=3         " Minumum lines to keep above and below cursor
@@ -92,21 +85,6 @@ set dir=/tmp
 set undodir=/tmp
 set undofile
 
-" Disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Save with Ctrl-S
-noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <ESC>:update<CR>
-inoremap <silent> <C-S> <ESC>:update<CR>
-
-" Better tabs navigation
-nnoremap <silent> <C-Left> :tabprevious<CR>
-nnoremap <silent> <C-Right> :tabnext<CR>
-nnoremap <silent> <A-Left> :tabm -1<CR>
-nnoremap <silent> <A-Right> :tabm +1<CR>
-nnoremap <silent> <C-T> :tabnew<CR>
-
 " Better window splits navigation
 nnoremap <silent> <C-H> :wincmd h<CR>
 nnoremap <silent> <C-J> :wincmd j<CR>
@@ -116,23 +94,8 @@ set splitbelow
 set splitright
 
 " Easier shortcuts
-nnoremap <silent> <C-W> :q<CR>
-nnoremap <silent> <C-Q> :qa!<CR>
-nnoremap <silent> <F1> :NERDTreeToggle<CR>
 nnoremap <silent> <F2> :TagbarToggle<CR>
 nnoremap <silent> <F3> :Goyo<CR>
-
-" Autorefresh files when modified externally
-set autoread
-" Triger `autoread` when files changes on disk
-" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
-" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
-autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
-  \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
-" Notification after file change
-" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
-autocmd FileChangedShellPost *
-  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 " --- Plugin 'mhinz/vim-startify' ---
 " returns all modified files of the current git repo
