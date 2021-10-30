@@ -11,6 +11,7 @@ Plugin 'tpope/vim-sensible'
 
 " --- making Vim look good ---
 Plugin 'tomasiser/vim-code-dark'
+Plugin 'vim-airline/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 
 " --- navigation ---
@@ -82,6 +83,11 @@ set splitright
 " Easier shortcuts
 nnoremap <silent> <F2> :TagbarToggle<CR>
 nnoremap <silent> <F3> :Goyo<CR>
+
+" --- Plugin 'vim-airline/vim-airline' ---
+let g:airline_theme = 'codedark'
+let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%% %L:%v'])
 
 " --- Plugin 'mhinz/vim-startify' ---
 " returns all modified files of the current git repo
