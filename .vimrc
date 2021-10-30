@@ -6,9 +6,11 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+" --- defaults everyone can agree on ---
+Plugin 'tpope/vim-sensible'
+
 " --- making Vim look good ---
 Plugin 'tomasiser/vim-code-dark'
-"Plugin 'itchyny/lightline.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 
 " --- navigation ---
@@ -32,8 +34,6 @@ Plugin 'junegunn/limelight.vim'
 call vundle#end()
 filetype plugin indent on
 
-" === END OF PLUGINS ===
-
 " Add mouse support
 set mouse=a
 
@@ -42,22 +42,10 @@ set mouse=a
 set t_Co=256
 set t_ut=
 colorscheme codedark    " awesome colorscheme
-syntax enable           " enable syntax processing
-
-" Spaces & Tabs
-set expandtab           " insert spaces when tab is pressed
-set tabstop=2           " insert x spaces when tab is pressed
-set shiftwidth=2        " change the number of space characters inserted for indentation
 
 " UI Config
 set number              " show line numbers
-set showcmd             " show command in bottom bar
-"set cursorline          " highlight current line
-set lazyredraw          " redraw only when we need to.
-
-" Finding files
-set path+=**            " provide tab-completion for all file-related tasks
-set wildmenu            " display all matching files when we tab complete
+set cursorline          " highlight current line
 
 " Moving
 set scrolloff=3         " Minumum lines to keep above and below cursor
@@ -71,12 +59,8 @@ vmap j gj
 vmap k gk
 
 " Searching
-set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set ignorecase          " do case insensitive search
-
-" Leader Shortcuts
-let mapleader=","       " leader is comma
 
 " Save backups and swap files to /tmp
 set backup
