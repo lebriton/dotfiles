@@ -47,6 +47,7 @@ colorscheme codedark    " awesome colorscheme
 " UI Config
 set number              " show line numbers
 set cursorline          " highlight current line
+set fillchars+=vert:│
 
 " Moving
 set scrolloff=3         " Minumum lines to keep above and below cursor
@@ -105,16 +106,18 @@ function! s:gitUntracked()
 endfunction
 
 let g:startify_lists = [
-        \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
-        \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
-        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-        \ { 'type': 'files',     'header': ['   MRU']            },
-        \ { 'type': 'sessions',  'header': ['   Sessions']       },
-        \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-        \ { 'type': 'commands',  'header': ['   Commands']       },
+        \ { 'type': function('s:gitModified'),  'header': ['    Git modified files']},
+        \ { 'type': function('s:gitUntracked'), 'header': ['    Git untracked files']},
+        \ { 'type': 'dir',       'header': ['    Recent files in '. getcwd()] },
+        \ { 'type': 'files',     'header': ['    Recent files']            },
+        \ { 'type': 'sessions',  'header': ['    Sessions']       },
+        \ { 'type': 'bookmarks', 'header': ['    Bookmarks']      },
+        \ { 'type': 'commands',  'header': ['    Commands']       },
         \ ]
 
 let g:startify_custom_header = ''
+let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'b': '~/.bashrc'} ]
+let g:startify_padding_left = 8
 
 " --- Plugin 'junegunn/limelight.vim' ---
 let g:limelight_conceal_ctermfg = 'gray'
