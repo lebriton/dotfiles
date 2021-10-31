@@ -73,6 +73,10 @@ set dir=/tmp
 set undodir=/tmp
 set undofile
 
+" Auto reload opened files
+" (feels like a hack)
+set autoread | au CursorHold * checktime | call feedkeys("lh")
+
 " Better window splits navigation
 nnoremap <silent> <C-H> :wincmd h<CR>
 nnoremap <silent> <C-J> :wincmd j<CR>
