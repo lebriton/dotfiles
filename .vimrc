@@ -89,6 +89,12 @@ set splitright
 nnoremap <silent> <F2> :TagbarToggle<CR>
 nnoremap <silent> <F3> :Goyo<CR>
 
+" Easy copy-paste to system clipboard
+nnoremap <silent> <C-C> "+yy
+vnoremap <silent> <C-C> "+y
+nnoremap <silent> <C-V> "+p
+inoremap <silent> <C-V> <ESC>"+pa
+
 " --- Plugin 'vim-airline/vim-airline' ---
 let g:airline_theme = 'codedark'
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
