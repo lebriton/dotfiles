@@ -15,7 +15,7 @@ bak() {
   cp "$1" "$1.bak"
 }
 
-alias dotfiles='git --git-dir=~/.dotfiles/ --work-tree=~'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias d='dotfiles'
 alias v='vim'
 alias g='git'
