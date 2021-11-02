@@ -132,6 +132,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
 
+export PS1="\[\e[01;32m\]➜\[\e[m\] \[\e[34m\]\w\[\e[m\] "
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="\$(__git_ps1 '(%s) ')$PS1"
 
