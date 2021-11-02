@@ -14,9 +14,6 @@ Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 
-" --- navigation ---
-Plugin 'preservim/tagbar'
-
 " --- fuzzy finding ---
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
@@ -38,6 +35,8 @@ Plugin 'junegunn/limelight.vim'
 
 call vundle#end()
 filetype plugin indent on
+
+let mapleader=","
 
 " Add mouse support
 set mouse=a
@@ -84,23 +83,43 @@ set undofile
 " (feels like a hack)
 set autoread | au CursorHold * checktime | call feedkeys("lh")
 
-" Better window splits navigation
-nnoremap <silent> <C-H> :wincmd h<CR>
-nnoremap <silent> <C-J> :wincmd j<CR>
-nnoremap <silent> <C-K> :wincmd k<CR>
-nnoremap <silent> <C-L> :wincmd l<CR>
-set splitbelow
-set splitright
+" Behave like other capitals
+nnoremap Y y$
 
-" Easier shortcuts
-nnoremap <silent> <F2> :TagbarToggle<CR>
-nnoremap <silent> <F3> :Goyo<CR>
+" Keep the cursor centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap : :<c-g>u
+inoremap ; ;<c-g>u
+
+" Moving text around
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+
+" Better window splits navigation
+"nnoremap <silent> <C-H> :wincmd h<CR>
+"nnoremap <silent> <C-J> :wincmd j<CR>
+"nnoremap <silent> <C-K> :wincmd k<CR>
+"nnoremap <silent> <C-L> :wincmd l<CR>
+"set splitbelow
+"set splitright
 
 " Easy copy-paste to system clipboard
-nnoremap <silent> <C-C> "+yy
-vnoremap <silent> <C-C> "+y
-nnoremap <silent> <C-V> "+p
-inoremap <silent> <C-V> <ESC>"+pa
+"nnoremap <silent> <C-C> "+yy
+"vnoremap <silent> <C-C> "+y
+"nnoremap <silent> <C-V> "+p
+"inoremap <silent> <C-V> <ESC>"+pa
 
 " --- Plugin 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
@@ -133,8 +152,12 @@ let g:startify_lists = [
         \ ]
 
 let g:startify_custom_header = ''
-let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'b': '~/.bashrc'} ]
+" using 'g' (for gitconfig) seems to be broken
+let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'a': '~/.bash_aliases'}, {'b': '~/.bashrc'}, {'c': '~/.gitconfig'}, {'t': '~/.tmux.conf'} ]
 let g:startify_padding_left = 8
+
+" --- plugin 'junegunn/goyo.vim' ---
+nnoremap <silent> <f8> :goyo<cr>
 
 " --- Plugin 'junegunn/limelight.vim' ---
 let g:limelight_conceal_ctermfg = 'gray'
