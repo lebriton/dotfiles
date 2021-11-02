@@ -3,11 +3,11 @@
 ## Installing
 
 ```
-git clone --bare git@gitlab.com:bminusl/dotfiles.git $HOME/.dotfiles
+git clone --bare git@gitlab.com:bminusl/dotfiles.git ~/.dotfiles
 # or
-git clone --bare https://gitlab.com/bminusl/dotfiles.git $HOME/.dotfiles
+git clone --bare https://gitlab.com/bminusl/dotfiles.git ~/.dotfiles
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=~/.dotfiles/ --work-tree=~'
 dotfiles checkout master
 dotfiles config --local status.showUntrackedFiles no
 source ~/.bashrc
@@ -16,5 +16,5 @@ source ~/.bashrc
 ## Pushing changes
 
 ```
-dotfiles push origin main
+dotfiles push origin master
 ```
