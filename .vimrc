@@ -10,12 +10,16 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 
 " --- making Vim look good ---
-Plugin 'tomasiser/vim-code-dark'
+Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 
 " --- navigation ---
 Plugin 'preservim/tagbar'
+
+" --- fuzzy finding ---
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " --- completion ---
 Plugin 'ervandew/supertab'
@@ -39,15 +43,16 @@ filetype plugin indent on
 set mouse=a
 
 " Colors
-" fix colors when inside GNU/screen
-set t_Co=256
-set t_ut=
-colorscheme codedark    " awesome colorscheme
+set background=dark  	" Setting dark mode
+colorscheme gruvbox     " awesome colorscheme
+highlight Normal ctermbg=none
+highlight LineNr ctermfg=blue
 
 " UI Config
-set number              " show line numbers
-set cursorline          " highlight current line
 set fillchars+=vert:│
+set relativenumber
+set nowrap
+set colorcolumn=80
 
 " Moving
 set scrolloff=3         " Minumum lines to keep above and below cursor
@@ -63,6 +68,8 @@ vmap k gk
 " Searching
 set hlsearch            " highlight matches
 set ignorecase          " do case insensitive search
+
+set hidden
 
 " Save backups and swap files to /tmp
 set backup
@@ -96,7 +103,7 @@ nnoremap <silent> <C-V> "+p
 inoremap <silent> <C-V> <ESC>"+pa
 
 " --- Plugin 'vim-airline/vim-airline' ---
-let g:airline_theme = 'codedark'
+let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%% %L:%v'])
 
