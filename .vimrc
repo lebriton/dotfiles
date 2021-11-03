@@ -41,6 +41,7 @@ set background=dark  	" Setting dark mode
 colorscheme gruvbox     " awesome colorscheme
 highlight Normal ctermbg=none
 highlight LineNr ctermfg=blue
+highlight VertSplit ctermbg=none
 
 " UI Config
 set fillchars+=vert:│
