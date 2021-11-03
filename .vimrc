@@ -1,40 +1,35 @@
-set nocompatible
-filetype off
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
 " --- defaults everyone can agree on ---
-Plugin 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 
 " --- making Vim look good ---
-Plugin 'morhetz/gruvbox'
-Plugin 'vim-airline/vim-airline'
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'ntpeters/vim-better-whitespace'
 
 " --- fuzzy finding ---
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " --- completion ---
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'
 
 " --- working with Git ---
-Plugin 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
 
 " --- others ---
-Plugin 'tpope/vim-surround'
-Plugin 'Raimondi/delimitMate'
-Plugin 'mhinz/vim-startify'
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'
+Plug 'mhinz/vim-startify'
 
 " --- distraction-free editing ---
-Plugin 'junegunn/goyo.vim'
-Plugin 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 let mapleader=","
 
