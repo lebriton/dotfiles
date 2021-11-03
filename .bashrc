@@ -132,7 +132,26 @@ export PATH="$HOME/.cargo/bin:$PATH"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export PS1="\[\e[01;32m\]➜\[\e[m\] \[\e[34m\]\w\[\e[m\] "
-export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="\$(__git_ps1 '(%s) ')$PS1"
 
 xinput disable "PS/2 Generic Mouse"
+
+# Colors
+light_green="\[\e[1;32m\]"
+light_red="\[\e[1;31m\]"
+blue="\[\e[1;34m\]"
+gray="\[\e[0;37m\]"
+reset="\[\e[m\]"
+
+prompt_command() {
+  local status="$?"
+  local status_color=""
+  if [ $status != 0 ]; then
+    status_color=$light_red
+  else
+    status_color=$light_green
+  fi
+  export PS1="${gray}$(__git_ps1 '(%s) ')${reset}${status_color}➜${reset} ${blue}\w${reset} "
+}
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PROMPT_COMMAND=prompt_command
