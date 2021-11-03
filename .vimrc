@@ -149,7 +149,7 @@ let g:startify_lists = [
 
 let g:startify_custom_header = ''
 " using 'g' (for gitconfig) seems to be broken
-let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'f': '~/.config/fish/config.fish'}, {'gc': '~/.gitconfig'}, {'t': '~/.tmux.conf'} ]
+let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'a': '~/.bash_aliases'}, {'b': '~/.bashrc'}, {'gc': '~/.gitconfig'}, {'t': '~/.tmux.conf'} ]
 let g:startify_padding_left = 8
 
 " --- plugin 'junegunn/goyo.vim' ---

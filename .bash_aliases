@@ -11,9 +11,9 @@ alias l='ls -CF'
 
 alias mkdir='mkdir -pv'
 
-#bak() {
-#  cp "$1" "$1.bak"
-#}
+bak() {
+  cp "$1" "$1.bak"
+}
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias d='dotfiles'
@@ -21,6 +21,3 @@ alias v='vim'
 alias g='git'
 #alias s='screen'
 alias t='tmux'
-
-# Remove the startup message
-set fish_greeting
