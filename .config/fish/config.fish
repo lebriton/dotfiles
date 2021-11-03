@@ -21,3 +21,6 @@ alias v='vim'
 alias g='git'
 #alias s='screen'
 alias t='tmux'
+
+# Remove the startup message
+set fish_greeting
