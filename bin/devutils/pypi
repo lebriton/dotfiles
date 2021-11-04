@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+read -p "[pypi] package name: " package
+[[ -z "$package" ]] && echo "Invalid input. Aborting." && exit 1
+
+# TODO: encode the url
+url="https://pypi.org/project/$package/"
+http_code=$(curl -s -o /dev/null -I -w "%{http_code}" "$url")
+
+if [[ "$http_code" -eq 404 ]]; then
+	url="https://pypi.org/search/?q=$package"
+fi
+
+firefox --new-tab --url "$url"
