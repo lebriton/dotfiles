@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-executables=$(find . -type f -executable -printf "%f\n" | grep -v "$(basename $0)" | sort)
+here=$(dirname "$0")
+
+executables=$(find "$here" -type f -executable -printf "%f\n" | grep -v "$(basename $0)" | sort)
 util=$(echo -e "$executables" | dmenu -p "devutils" -l 10)
 [[ -z $util ]] && exit 1
 
-util_script=$(dirname $0)/$util
+util_script=$here/$util
 
 tmux neww "tmux rename-window \"devutils[$util]\" && $util_script"
