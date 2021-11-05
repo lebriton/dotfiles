@@ -3,7 +3,7 @@
 here=$(dirname "$0")
 
 executables=$(find "$here" -type f -executable -printf "%f\n" | grep -v "$(basename $0)" | sort)
-util=$(echo -e "$executables" | dmenu -p "devutils" -l 10)
+util=$(echo -e "$executables" | dmenu -p "devutils" -l 10 -nf "#a89984" -nb "#282828" -sf "#ebdbb2" -sb "#98971a")
 [[ -z $util ]] && exit 1
 
 util_script=$here/$util
