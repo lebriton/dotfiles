@@ -50,6 +50,11 @@ set relativenumber
 set nowrap
 set colorcolumn=80
 
+" Spaces & Tabs
+set expandtab           " insert spaces when tab is pressed
+set tabstop=2           " insert x spaces when tab is pressed
+set shiftwidth=2        " change the number of space characters inserted for indentation
+
 " Moving
 set scrolloff=3         " Minumum lines to keep above and below cursor
 " visual shifting (does not exit Visual mode)
