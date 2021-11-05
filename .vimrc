@@ -45,6 +45,7 @@ highlight VertSplit ctermbg=none
 
 " UI Config
 set fillchars+=vert:│
+set number
 set relativenumber
 set nowrap
 set colorcolumn=80
