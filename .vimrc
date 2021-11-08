@@ -123,10 +123,13 @@ nnoremap <leader>k :m .-2<CR>==
 "nnoremap <silent> <C-V> "+p
 "inoremap <silent> <C-V> <ESC>"+pa
 
-" --- Plugin 'vim-airline/vim-airline' ---
+" --- Plug 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%% %L:%v'])
+
+" --- Plug 'junegunn/fzf.vim' ---
+nnoremap <C-p> :GFiles<Cr>
 
 " --- Plugin 'mhinz/vim-startify' ---
 " returns all modified files of the current git repo
@@ -158,10 +161,10 @@ let g:startify_custom_header = ''
 let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'a': '~/.alacritty.yml'}, {'b': '~/.bashrc'}, {'ba': '~/.bash_aliases'}, {'gc': '~/.gitconfig'}, {'t': '~/.tmux.conf'} ]
 let g:startify_padding_left = 8
 
-" --- plugin 'junegunn/goyo.vim' ---
-nnoremap <silent> <f8> :goyo<cr>
+" --- Plug 'junegunn/goyo.vim' ---
+nnoremap <silent> <f8> :Goyo<cr>
 
-" --- Plugin 'junegunn/limelight.vim' ---
+" --- Plug 'junegunn/limelight.vim' ---
 let g:limelight_conceal_ctermfg = 'gray'
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
