@@ -25,6 +25,11 @@ stty -ixon # Disable ctrl-s and ctrl-q
 
 export EDITOR=vim
 
+# TODO: do not add duplicates
+export PATH=~/.local/bin:$PATH
+export PATH=~/bin:$PATH
+export PATH=~/.cargo/bin:$PATH # rust
+
 prompt_command() {
   light_green="\[\e[1;32m\]"
   light_red="\[\e[1;31m\]"
