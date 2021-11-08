@@ -151,7 +151,15 @@ let g:startify_lists = [
 
 let g:startify_custom_header = ''
 " using 'g' (for gitconfig) seems to be broken
-let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'a': '~/.alacritty.yml'}, {'b': '~/.bashrc'}, {'ba': '~/.bash_aliases'}, {'gc': '~/.gitconfig'}, {'t': '~/.tmux.conf'} ]
+let g:startify_bookmarks = [
+        \ {'v': '~/.vimrc'},
+        \ {'a': '~/.alacritty.yml'},
+        \ {'b': '~/.bashrc'},
+        \ {'ba': '~/.bash_aliases'},
+        \ {'bb': '~/.bash_bindings'},
+        \ {'gc': '~/.gitconfig'},
+        \ {'t': '~/.tmux.conf'},
+        \ ]
 let g:startify_padding_left = 8
 
 " --- Plug 'fcpg/vim-osc52' ---
