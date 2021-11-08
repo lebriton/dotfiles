@@ -24,6 +24,7 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'mhinz/vim-startify'
+Plug 'fcpg/vim-osc52'
 
 " --- distraction-free editing ---
 Plug 'junegunn/goyo.vim'
@@ -31,7 +32,7 @@ Plug 'junegunn/limelight.vim'
 
 call plug#end()
 
-let mapleader=","
+let mapleader=" "
 
 " Add mouse support
 set mouse=a
@@ -102,20 +103,12 @@ inoremap : :<c-g>u
 inoremap ; ;<c-g>u
 
 " Moving text around
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '>-2<CR>gv=gv
-inoremap <C-j> <esc>:m .+1<CR>==
-inoremap <C-k> <esc>:m .-2<CR>==
-nnoremap <leader>j :m .+1<CR>==
-nnoremap <leader>k :m .-2<CR>==
-
-" Better window splits navigation
-"nnoremap <silent> <C-H> :wincmd h<CR>
-"nnoremap <silent> <C-J> :wincmd j<CR>
-"nnoremap <silent> <C-K> :wincmd k<CR>
-"nnoremap <silent> <C-L> :wincmd l<CR>
-"set splitbelow
-"set splitright
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==gi
+inoremap <C-k> <esc>:m .-2<CR>==gi
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
 
 " Easy copy-paste to system clipboard
 "nnoremap <silent> <C-C> "+yy
@@ -160,6 +153,9 @@ let g:startify_custom_header = ''
 " using 'g' (for gitconfig) seems to be broken
 let g:startify_bookmarks = [ {'v': '~/.vimrc'}, {'a': '~/.alacritty.yml'}, {'b': '~/.bashrc'}, {'ba': '~/.bash_aliases'}, {'gc': '~/.gitconfig'}, {'t': '~/.tmux.conf'} ]
 let g:startify_padding_left = 8
+
+" --- Plug 'fcpg/vim-osc52' ---
+vmap <C-c> y:Oscyank<cr>
 
 " --- Plug 'junegunn/goyo.vim' ---
 nnoremap <silent> <f8> :Goyo<cr>
