@@ -131,6 +131,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+bind '"\C-f": "~/bin/tmux-sessionizer\n"'
+
 export PS1="\[\e[01;32m\]➜\[\e[m\] \[\e[34m\]\w\[\e[m\] "
 export PS1="\$(__git_ps1 '(%s) ')$PS1"
 
