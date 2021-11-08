@@ -11,6 +11,8 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles checkout master
 dotfiles config --local status.showUntrackedFiles no
 source ~/.bashrc
+
+wget https://raw.githubusercontent.com/mrzool/bash-sensible/master/sensible.bash -O .sensible.bash
 ```
 
 ## Pushing changes
