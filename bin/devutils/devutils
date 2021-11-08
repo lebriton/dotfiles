@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-here=$(dirname "$0")
+here=$(dirname "${BASH_SOURCE[0]}")
+this=$(basename "${BASH_SOURCE[0]}")
 
-executables=$(find "$here" -type f -executable -printf "%f\n" | grep -v "$(basename $0)" | sort)
-util=$(echo -e "$executables" | dmenu -p "devutils" -l 10 -nf "#a89984" -nb "#282828" -sf "#ebdbb2" -sb "#98971a")
-[[ -z $util ]] && exit 1
+executables=$(find "$here" -type f -executable -printf "%f\n" | grep -v "$this" | sort)
+util=$(echo -e "$executables" | fzf --prompt "devutils> " --layout reverse)
 
-util_script=$here/$util
-
-tmux neww "tmux rename-window \"devutils[$util]\" && $util_script"
+$here/$util

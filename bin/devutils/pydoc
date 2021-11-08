@@ -1,17 +1,6 @@
 #!/usr/bin/env bash
 
-main() {
-	read -p "[pydoc] thing: " thing
-	[[ -z "$thing" ]] && echo "Invalid input. Aborting." && return
+read -p "[pydoc] query: " query
+[[ -z "$query" ]] && echo "Invalid input. Aborting." && exit 1
 
-	pydoc "$thing"
-	# NB: the following code is dead code, since pydoc does not use correct
-	# exit codes when failing
-	retval=$?
-	[[ $retval -eq 0 ]] && exit 0
-}
-
-main
-
-read -p "Press [ENTER] to continue"
-exit 1
+pydoc "$query"
