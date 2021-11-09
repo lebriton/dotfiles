@@ -15,7 +15,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " --- completion ---
-Plug 'ervandew/supertab'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " --- working with Git ---
 Plug 'mhinz/vim-signify'
@@ -123,6 +123,14 @@ au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3
 
 " --- Plug 'junegunn/fzf.vim' ---
 nnoremap <C-p> :GFiles<Cr>
+
+" --- Plug 'neoclide/coc.nvim' ---
+let g:coc_disable_startup_warning = 1
+source ~/.coc.vimrc
+let g:coc_global_extensions = [
+        \ 'coc-json',
+        \ 'coc-git',
+        \ ]
 
 " --- Plugin 'mhinz/vim-startify' ---
 " returns all modified files of the current git repo
