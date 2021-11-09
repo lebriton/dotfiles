@@ -169,6 +169,7 @@ let g:startify_bookmarks = [
         \ {'t': '~/.tmux.conf'},
         \ ]
 let g:startify_padding_left = 8
+let g:startify_custom_header = startify#pad(split(system('vim --version | head -1'), '\n'))
 
 " --- Plug 'fcpg/vim-osc52' ---
 vmap <C-c> y:Oscyank<cr>
