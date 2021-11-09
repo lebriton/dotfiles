@@ -129,7 +129,12 @@ let g:coc_disable_startup_warning = 1
 source ~/.coc.vimrc
 let g:coc_global_extensions = [
         \ 'coc-json',
+        \ 'coc-yaml',
+        \ 'coc-xml',
         \ 'coc-git',
+        \ 'coc-pyright',
+        \ 'coc-html',
+        \ 'coc-css',
         \ ]
 
 " --- Plugin 'mhinz/vim-startify' ---
@@ -161,6 +166,7 @@ let g:startify_custom_header = ''
 " using 'g' (for gitconfig) seems to be broken
 let g:startify_bookmarks = [
         \ {'v': '~/.vimrc'},
+        \ {'vc': '~/.coc.vimrc'},
         \ {'a': '~/.alacritty.yml'},
         \ {'b': '~/.bashrc'},
         \ {'ba': '~/.bash_aliases'},
