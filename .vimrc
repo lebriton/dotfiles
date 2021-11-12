@@ -18,7 +18,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " --- working with Git ---
-Plug 'mhinz/vim-signify'
+"Plug 'mhinz/vim-signify'
 
 " --- others ---
 Plug 'tpope/vim-surround'
