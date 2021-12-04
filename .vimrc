@@ -25,6 +25,7 @@ Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'mhinz/vim-startify'
 Plug 'fcpg/vim-osc52'
+Plug 'liuchengxu/vim-which-key'
 
 " --- distraction-free editing ---
 Plug 'junegunn/goyo.vim'
@@ -179,6 +180,11 @@ let g:startify_custom_header = startify#pad(split(system('vim --version | head -
 
 " --- Plug 'fcpg/vim-osc52' ---
 vmap <C-c> y:Oscyank<cr>
+
+" --- Plug 'liuchengxu/vim-which-key' ---
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
+let g:which_key_disable_default_offset=1
 
 " --- Plug 'junegunn/goyo.vim' ---
 nnoremap <silent> <f8> :Goyo<cr>
