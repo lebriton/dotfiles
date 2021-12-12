@@ -16,6 +16,7 @@ Plug 'junegunn/fzf.vim'
 
 " --- completion ---
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
 
 " --- working with Git ---
 "Plug 'mhinz/vim-signify'
@@ -136,6 +137,7 @@ let g:coc_global_extensions = [
         \ 'coc-pyright',
         \ 'coc-html',
         \ 'coc-css',
+        \ 'coc-snippets',
         \ ]
 
 " --- Plugin 'mhinz/vim-startify' ---
