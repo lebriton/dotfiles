@@ -132,6 +132,7 @@ let g:coc_global_extensions = [
         \ 'coc-html',
         \ 'coc-css',
         \ 'coc-snippets',
+        \ 'coc-sh',
         \ ]
 
 " --- Plugin 'mhinz/vim-startify' ---
