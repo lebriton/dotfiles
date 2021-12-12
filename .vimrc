@@ -18,9 +18,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
-" --- working with Git ---
-"Plug 'mhinz/vim-signify'
-
 " --- others ---
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
@@ -111,12 +108,6 @@ inoremap <C-j> <esc>:m .+1<CR>==gi
 inoremap <C-k> <esc>:m .-2<CR>==gi
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
-
-" Easy copy-paste to system clipboard
-"nnoremap <silent> <C-C> "+yy
-"vnoremap <silent> <C-C> "+y
-"nnoremap <silent> <C-V> "+p
-"inoremap <silent> <C-V> <ESC>"+pa
 
 " --- Plug 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
