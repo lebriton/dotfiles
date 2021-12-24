@@ -1,0 +1,3 @@
+# vim:syntax=bash
+bind '"\C-f": "~/bin/tmux-sessionizer\n"'
+bind '"\C-w": "~/bin/vim-wiki\n"'

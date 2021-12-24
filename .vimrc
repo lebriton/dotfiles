@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'VundleVim/Vundle.vim'
@@ -28,6 +30,9 @@ Plug 'liuchengxu/vim-which-key'
 " --- distraction-free editing ---
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+
+" --- wiki ---
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -191,3 +196,7 @@ nnoremap <silent> <f8> :Goyo<cr>
 let g:limelight_conceal_ctermfg = 'gray'
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+" --- Plug 'vimwiki/vimwiki' ---
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                     \ 'syntax': 'markdown', 'ext': '.md'}]
