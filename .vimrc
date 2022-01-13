@@ -117,6 +117,10 @@ nnoremap <C-k> :m .-2<CR>==
 " Work with azerty keyboards
 noremap ' <C-^>
 
+" Buffer navigation
+nnoremap <PageUp>   :bprevious<CR>
+nnoremap <PageDown> :bnext<CR>
+
 " --- Plug 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
