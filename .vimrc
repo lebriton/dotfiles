@@ -170,7 +170,6 @@ let g:startify_lists = [
         \ { 'type': 'commands',  'header': ['    Commands']       },
         \ ]
 
-let g:startify_custom_header = ''
 " using 'g' (for gitconfig) seems to be broken
 let g:startify_bookmarks = [
         \ {'v': '~/.vimrc'},
