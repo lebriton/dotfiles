@@ -26,6 +26,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'mhinz/vim-startify'
 Plug 'fcpg/vim-osc52'
 Plug 'liuchengxu/vim-which-key'
+Plug 'tpope/vim-eunuch'
 
 " --- distraction-free editing ---
 Plug 'junegunn/goyo.vim'
