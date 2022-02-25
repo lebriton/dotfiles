@@ -31,3 +31,12 @@ colors:
     white:   '0xebdbb2'
 
 background_opacity: 0.95
+
+shell:
+  program: tmux
+  args:
+    - new-session
+    - -A
+    - -D
+    - -s
+    - main
