@@ -19,6 +19,7 @@ Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'fcpg/vim-osc52'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-unimpaired'
 
 " --- fuzzy finding ---
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
