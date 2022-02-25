@@ -12,6 +12,14 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'ntpeters/vim-better-whitespace'
 
+" --- ... and ergonomic ---
+Plug 'mhinz/vim-startify'
+Plug 'liuchengxu/vim-which-key'
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'
+Plug 'fcpg/vim-osc52'
+Plug 'tpope/vim-eunuch'
+
 " --- fuzzy finding ---
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -19,14 +27,6 @@ Plug 'junegunn/fzf.vim'
 " --- completion ---
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
-
-" --- others ---
-Plug 'tpope/vim-surround'
-Plug 'Raimondi/delimitMate'
-Plug 'mhinz/vim-startify'
-Plug 'fcpg/vim-osc52'
-Plug 'liuchengxu/vim-which-key'
-Plug 'tpope/vim-eunuch'
 
 " --- distraction-free editing ---
 Plug 'junegunn/goyo.vim'
