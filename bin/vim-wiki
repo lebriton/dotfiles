@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-selected=$(FZF_DEFAULT_COMMAND="find ~/Nextcloud/Notes/ -type f" fzf --prompt "wiki file to open: ")
-
-[[ -z "$selected" ]] && exit 0
-
-vim "$selected"
