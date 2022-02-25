@@ -40,7 +40,7 @@ call plug#end()
 let mapleader=" "
 
 " Add mouse support
-set mouse=a
+"set mouse=a
 
 " Colors
 set background=dark  	" Setting dark mode
