@@ -203,4 +203,11 @@ autocmd! User GoyoLeave Limelight!
 
 " --- Plug 'vimwiki/vimwiki' ---
 let g:vimwiki_list = [{'path': '~/Nextcloud/Notes/',
-                     \ 'syntax': 'markdown', 'ext': '.md'}]
+                     \ 'syntax': 'markdown', 'ext': '.md',
+                     \ 'auto_toc': 1,
+                     \ 'auto_tags': 1,
+                     \ 'auto_diary_index': 1,
+                     \ 'auto_generate_links': 1,
+                     \ 'auto_generate_tags': 1,
+                     \ }]
+let g:vimwiki_auto_header = 1
