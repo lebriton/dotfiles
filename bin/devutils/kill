@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-choice=$(ps --format "%p%t%a" --no-headers -x | fzf --prompt "Process to kill (kill -9): ")
-[[ -z "$choice" ]] && echo "Aborting." && exit 1
-
-echo "$choice" | awk '{print $1}' | xargs kill -9

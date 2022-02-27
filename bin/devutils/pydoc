@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-read -p "[pydoc] query: " query
-[[ -z "$query" ]] && echo "Invalid input. Aborting." && exit 1
-
-pydoc "$query"
