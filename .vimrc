@@ -175,6 +175,7 @@ let g:startify_lists = [
         \ ]
 
 " using 'g' (for gitconfig) seems to be broken
+" cannot use 'q' or 'qt' for qtile
 let g:startify_bookmarks = [
         \ {'v': '~/.vimrc'},
         \ {'vc': '~/.coc.vimrc'},
@@ -183,6 +184,7 @@ let g:startify_bookmarks = [
         \ {'ba': '~/.bash_aliases'},
         \ {'bb': '~/.bash_bindings'},
         \ {'gc': '~/.gitconfig'},
+        \ {'p': '~/.config/qtile/config.py'},
         \ {'t': '~/.tmux.conf'},
         \ ]
 let g:startify_padding_left = 8
