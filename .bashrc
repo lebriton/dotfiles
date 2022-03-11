@@ -7,10 +7,6 @@ esac
 [ -f ~/.sensible.bash ] && source ~/.sensible.bash
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.bash_bindings ] && source ~/.bash_bindings
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # enable programmable completion features (you don't need to enable
@@ -32,7 +28,6 @@ export EDITOR=vim
 # TODO: do not add duplicates
 export PATH=~/.local/bin:$PATH
 export PATH=~/bin:$PATH
-export PATH=~/.cargo/bin:$PATH # rust
 
 prompt_command() {
   light_green="\[\e[1;32m\]"
