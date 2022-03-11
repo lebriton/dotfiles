@@ -24,12 +24,42 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
+import subprocess
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget
+from libqtile import bar, extension, hook, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+
+# https://github.com/tuffgniuz/qtile/blob/master/colors.py
+gruvbox = {
+    'bg':           '#282828',
+    'fg':           '#d4be98',
+    'dark-red':     '#ea6962',
+    'red':          '#ea6962',
+    'dark-green':   '#a9b665',
+    'green':        '#a9b665',
+    'dark-yellow':  '#e78a4e',
+    'yellow':       '#d8a657',
+    'dark-blue':    '#7daea3',
+    'blue':         '#7daea3',
+    'dark-magenta': '#d3869b',
+    'magenta':      '#d3869b',
+    'dark-cyan':    '#89b482',
+    'cyan':         '#89b482',
+    'dark-gray':    '#665c54',
+    'gray':         '#928374',
+
+    'fg4':          '#766f64',
+    'fg3':          '#665c54',
+    'fg2':          '#504945',
+    'fg1':          '#3c3836',
+    'bg0':          '#32302f',
+    'fg0':          '#1d2021',
+    'fg9':          '#ebdbb2'
+}
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -66,16 +96,45 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key(["mod1", "control"], "t", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "a", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], 'd', lazy.run_extension(extension.DmenuRun(
+        dmenu_prompt="Run:",
+        dmenu_lines=15,
+        background=gruvbox["bg"],
+        foreground=gruvbox["fg"],
+        fontsize=12,
+        selected_background=gruvbox["blue"],
+        selected_foreground=gruvbox["bg"],
+    ))),
+    Key([mod], "f", lazy.window.toggle_fullscreen()),
+    Key([mod], "g", lazy.window.toggle_floating(), desc='Toggle floating'),
+    # Sound
+    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
 ]
 
-groups = [Group(i) for i in "123456789"]
+group_names = [
+    # ("?", {"layout": "columns"}),
+    ("q", {}),
+    ("w", {}),
+    ("e", {}),
+    ("r", {}),
+    ("t", {}),
+    ("y", {}),
+    ("u", {}),
+    ("i", {}),
+    ("o", {}),
+    ("p", {}),
+]
+
+groups = [Group(name, **kwargs) for name, kwargs in group_names]
 
 for i in groups:
     keys.extend(
@@ -101,9 +160,14 @@ for i in groups:
         ]
     )
 
+layout_defaults = dict(
+    border_normal=gruvbox["dark-gray"],
+    border_focus=gruvbox["blue"],
+    border_width=4,
+)
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    layout.Max(),
+    layout.Columns(**layout_defaults),
+    # layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -119,32 +183,38 @@ layouts = [
 
 widget_defaults = dict(
     font="sans",
-    fontsize=12,
+    fontsize=16,
     padding=3,
+    foreground=gruvbox["fg"],
+    theme_path="/usr/share/icons/Humanity-Dark/",
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
                 widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                widget.Systray(),
+                widget.Spacer(),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
+                widget.Spacer(),
+                widget.Systray(),
+                widget.Spacer(length=5),
+                widget.Volume(
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("pavucontrol")}
+                ),
+                widget.CurrentLayout(
+                    fontsize=int(widget_defaults["fontsize"] * .9),
+                    width=bar.CALCULATED
+                ),
+                widget.GroupBox(
+                    fontsize=int(widget_defaults["fontsize"] * .85),
+                    this_current_screen_border=gruvbox["red"],
+                    inactive=gruvbox["blue"],
+                ),
             ],
             24,
+            background=gruvbox["bg"],
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
@@ -160,7 +230,7 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
-follow_mouse_focus = True
+follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
@@ -192,3 +262,17 @@ auto_minimize = True
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+@hook.subscribe.setgroup
+def on_setgroup():
+    # NB: type(current_group) == group.Group, != config.Group
+    for i, g in enumerate(groups):
+        if qtile.current_group.name == g.name:
+            break
+    color = "#" + str(i) * 6
+    subprocess.run(["xsetroot", "-solid", color])
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser('~')
+    subprocess.Popen([home + '/.config/qtile/autostart.sh'])
