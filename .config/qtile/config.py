@@ -31,7 +31,6 @@ from typing import List  # noqa: F401
 from libqtile import bar, extension, hook, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 
 # https://github.com/tuffgniuz/qtile/blob/master/colors.py
 gruvbox = {
@@ -62,7 +61,6 @@ gruvbox = {
 }
 
 mod = "mod4"
-terminal = guess_terminal()
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -96,7 +94,7 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key(["mod1", "control"], "t", lazy.spawn(terminal), desc="Launch terminal"),
+    Key(["mod1", "control"], "t", lazy.spawn("alacritty"), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "a", lazy.window.kill(), desc="Kill focused window"),
