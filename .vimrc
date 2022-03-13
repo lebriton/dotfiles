@@ -185,6 +185,7 @@ let g:startify_bookmarks = [
         \ {'bb': '~/.bash_bindings'},
         \ {'gc': '~/.gitconfig'},
         \ {'p': '~/.config/qtile/config.py'},
+        \ {'pa': '~/.config/qtile/autostart.sh'},
         \ {'t': '~/.tmux.conf'},
         \ ]
 let g:startify_padding_left = 8
