@@ -189,6 +189,7 @@ let g:startify_bookmarks = [
         \ {'b': '~/.bashrc'},
         \ {'ba': '~/.bash_aliases'},
         \ {'bb': '~/.bash_bindings'},
+        \ {'d': '~/.config/dunst/dunstrc'},
         \ {'gc': '~/.gitconfig'},
         \ {'p': '~/.config/qtile/config.py'},
         \ {'pa': '~/.config/qtile/autostart.sh'},
