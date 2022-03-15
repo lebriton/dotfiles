@@ -179,7 +179,6 @@ let g:startify_lists = [
 let g:startify_bookmarks = [
         \ {'v': '~/.vimrc'},
         \ {'vc': '~/.coc.vimrc'},
-        \ {'a': '~/.alacritty.yml'},
         \ {'b': '~/.bashrc'},
         \ {'ba': '~/.bash_aliases'},
         \ {'bb': '~/.bash_bindings'},
@@ -187,6 +186,7 @@ let g:startify_bookmarks = [
         \ {'p': '~/.config/qtile/config.py'},
         \ {'pa': '~/.config/qtile/autostart.sh'},
         \ {'t': '~/.tmux.conf'},
+        \ {'x': '~/.Xresources'},
         \ ]
 let g:startify_padding_left = 8
 let g:startify_custom_header = startify#pad(split(system('vim --version | head -1'), '\n'))
