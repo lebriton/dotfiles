@@ -1,0 +1,17 @@
+- name: Update and upgrade packages
+  become: yes
+  apt:
+    upgrade: yes
+    update_cache: yes
+
+- name: Install useful packages
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - bash
+    - fzf
+    - git
+    - tmux
+    - vim

@@ -1,0 +1,6 @@
+- name: Provision a workstation with my dotfiles.
+  hosts: localhost
+  roles:
+    - packages
+    - bash
+    - vim

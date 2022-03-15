@@ -1,0 +1,4 @@
+- name: Download sensible.bash
+  get_url:
+    url: https://raw.githubusercontent.com/mrzool/bash-sensible/master/sensible.bash
+    dest: ~/.sensible.bash
