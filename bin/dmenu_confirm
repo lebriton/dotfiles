@@ -1,0 +1,3 @@
+#!/bin/bash
+
+[[ $(echo -e "Cancel\nYes" | dmenu -i -p "$1") = "Yes" ]] && eval "$2"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+choice=$(echo -e "Shutdown\nReboot\nLog out" | dmenu -i -p "Select an action:")
+
+case $choice in
+  "Shutdown") dmenu_confirm "Shutdown the machine?" "shutdown now" ;;
+  "Reboot")  dmenu_confirm "Reboot the machine?" "reboot" ;;
+  "Log out")  dmenu_confirm "Log out?" "qtile shell -c 'shutdown()'" ;;
+esac
+
