@@ -94,7 +94,7 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key(["mod1", "control"], "t", lazy.spawn("alacritty"), desc="Launch terminal"),
+    Key(["mod1", "control"], "t", lazy.spawn('urxvt -e "tmux"'), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "a", lazy.window.kill(), desc="Kill focused window"),
@@ -188,7 +188,6 @@ widget_defaults = dict(
     fontsize=16,
     padding=3,
     foreground=gruvbox["fg"],
-    theme_path="/usr/share/icons/Humanity-Dark/",
 )
 extension_defaults = widget_defaults.copy()
 
@@ -198,21 +197,34 @@ screens = [
             [
                 widget.WindowName(),
                 widget.Spacer(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
+                widget.Clock(format="%Y-%m-%d %a %H:%M %p"),
                 widget.Spacer(),
                 widget.Systray(),
                 widget.Spacer(length=5),
                 widget.Volume(
-                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("pavucontrol")}
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("pavucontrol")},
                 ),
                 widget.CurrentLayout(
                     fontsize=int(widget_defaults["fontsize"] * .9),
-                    width=bar.CALCULATED
+                    width=bar.CALCULATED,
                 ),
                 widget.GroupBox(
                     fontsize=int(widget_defaults["fontsize"] * .85),
                     this_current_screen_border=gruvbox["red"],
                     inactive=gruvbox["blue"],
+                ),
+                widget.Battery(
+                    fontsize=int(widget_defaults["fontsize"] * .9),
+                    format='{char} {percent:2.0%} ({hour:d}:{min:02d})',
+                    charge_char="↿",
+                    discharge_char="⇃",
+                    #empty_char="",
+                    #full_char="",
+                    #unknown_char="",
+                    notify_below=15,
+                    low_percentage=.15,
+                    low_background=gruvbox["red"],
+                    low_foreground=gruvbox["bg"],
                 ),
             ],
             24,

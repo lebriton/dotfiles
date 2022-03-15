@@ -1,3 +1,5 @@
 #!/bin/sh
-nm-applet &
 blueman-applet &
+compton &
+dunst &
+nm-applet &
