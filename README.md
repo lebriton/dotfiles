@@ -11,6 +11,4 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles checkout master
 dotfiles config --local status.showUntrackedFiles no
 source ~/.bashrc
-
-ansible-playbook ~/.ansible/post_install.yml --ask-become-pass
 ```
