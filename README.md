@@ -12,3 +12,9 @@ dotfiles checkout master
 dotfiles config --local status.showUntrackedFiles no
 source ~/.bashrc
 ```
+
+### bash
+
+```
+wget https://raw.githubusercontent.com/mrzool/bash-sensible/master/sensible.bash -O .sensible.bash
+```
