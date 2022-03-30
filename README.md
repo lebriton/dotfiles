@@ -8,7 +8,7 @@ git clone --bare git@gitlab.com:bminusl/dotfiles.git ~/.dotfiles
 git clone --bare https://gitlab.com/bminusl/dotfiles.git ~/.dotfiles
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dotfiles checkout master
+dotfiles checkout <branch-name>
 dotfiles config --local status.showUntrackedFiles no
 source ~/.bashrc
 ```
