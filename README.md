@@ -1,5 +1,7 @@
 # dotfiles
 
+NB: git branches are used for host-specific configs.
+
 ## Installing
 
 ```
