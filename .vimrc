@@ -182,19 +182,14 @@ let g:startify_lists = [
         \ ]
 
 " using 'g' (for gitconfig) seems to be broken
-" cannot use 'q' or 'qt' for qtile
 let g:startify_bookmarks = [
         \ {'v': '~/.vimrc'},
         \ {'vc': '~/.coc.vimrc'},
         \ {'b': '~/.bashrc'},
         \ {'ba': '~/.bash_aliases'},
         \ {'bb': '~/.bash_bindings'},
-        \ {'d': '~/.config/dunst/dunstrc'},
         \ {'gc': '~/.gitconfig'},
-        \ {'p': '~/.config/qtile/config.py'},
-        \ {'pa': '~/.config/qtile/autostart.sh'},
         \ {'t': '~/.tmux.conf'},
-        \ {'x': '~/.Xresources'},
         \ ]
 let g:startify_padding_left = 8
 let g:startify_custom_header = startify#pad(split(system('vim --version | head -1'), '\n'))
