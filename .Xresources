@@ -60,5 +60,6 @@ URxvt.keysym.C-M-v:    builtin-string:
 URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
 URxvt.keysym.C-S-0x56: eval:paste_clipboard
 
-urxvt*transparent: true
-urxvt*shading: 30
+! 95% transparency
+urxvt*depth: 32
+urxvt*background: rgba:2800/2800/2800/f300
