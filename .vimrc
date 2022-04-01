@@ -130,6 +130,8 @@ noremap ' <C-^>
 nnoremap <PageUp>   :bprevious<CR>
 nnoremap <PageDown> :bnext<CR>
 
+set conceallevel=0
+
 " --- Plug 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
