@@ -24,8 +24,11 @@ Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
+
+" --- project managment ---
+Plug 'tpope/vim-eunuch'
+Plug 'airblade/vim-rooter'
 
 " --- fuzzy finding ---
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -137,7 +140,7 @@ let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%% %L:%v'])
 
 " --- Plug 'junegunn/fzf.vim' ---
-nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-p> :Files<Cr>
 nnoremap <leader>/ :BLines<Cr>
 nnoremap <C-b> :Buffers<Cr>
 
