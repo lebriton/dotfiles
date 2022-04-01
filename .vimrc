@@ -137,6 +137,7 @@ set conceallevel=0
 " --- Plug 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+let g:airline#extensions#tabline#buffers_label = ''
 au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%% %L:%v'])
 
 " --- Plug 'junegunn/fzf.vim' ---
