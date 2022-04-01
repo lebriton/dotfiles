@@ -24,7 +24,6 @@ Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
-Plug 'fcpg/vim-osc52'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
 
@@ -195,9 +194,6 @@ let g:startify_bookmarks = [
         \ ]
 let g:startify_padding_left = 8
 let g:startify_custom_header = startify#pad(split(system('vim --version | head -1'), '\n'))
-
-" --- Plug 'fcpg/vim-osc52' ---
-vmap <C-c> y:Oscyank<cr>
 
 " --- Plug 'liuchengxu/vim-which-key' ---
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
