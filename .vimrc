@@ -198,6 +198,7 @@ let g:startify_bookmarks = [
         \ ]
 let g:startify_padding_left = 8
 let g:startify_custom_header = startify#pad(split(system('vim --version | head -1'), '\n'))
+let g:startify_change_to_dir = 0
 
 " --- Plug 'liuchengxu/vim-which-key' ---
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
