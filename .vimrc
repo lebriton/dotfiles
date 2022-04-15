@@ -202,8 +202,12 @@ nnoremap <silent> <f8> :Goyo<cr>
 
 " --- Plug 'junegunn/limelight.vim' ---
 let g:limelight_conceal_ctermfg = 'gray'
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
+augroup goyo_config
+  autocmd! User GoyoEnter Limelight
+  autocmd User GoyoEnter set wrap
+  autocmd! User GoyoLeave Limelight!
+  autocmd User GoyoLeave source $MYVIMRC
+augroup END
 
 " --- Plug 'vimwiki/vimwiki' ---
 let g:vimwiki_list = [{'path': '~/Nextcloud/Notes/',
