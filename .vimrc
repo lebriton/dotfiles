@@ -219,3 +219,8 @@ let g:vimwiki_list = [{'path': '~/Nextcloud/Notes/',
                      \ 'auto_generate_tags': 1,
                      \ }]
 let g:vimwiki_auto_header = 1
+
+
+" ---------------------------------------------------------------------------
+" Automatically source vimrc on save.
+autocmd! bufwritepost $MYVIMRC source $MYVIMRC
