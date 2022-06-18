@@ -42,9 +42,6 @@ Plug 'honza/vim-snippets'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
-" --- wiki ---
-Plug 'vimwiki/vimwiki'
-
 call plug#end()
 
 let mapleader=" "
