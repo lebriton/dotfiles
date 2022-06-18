@@ -103,6 +103,20 @@ noremap ' <C-^>
 " Buffer navigation
 nnoremap <PageUp>   :bprevious<CR>
 nnoremap <PageDown> :bnext<CR>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+
+" Toggle paste mode
+" https://dev.to/andy4thehuynh/create-a-shortcut-to-toggle-paste-mode-with-vim-5205
+function! TogglePaste()
+    if(&paste == 0)
+        set paste
+        echo "Paste Mode Enabled"
+    else
+        set nopaste
+        echo "Paste Mode Disabled"
+    endif
+endfunction
+map <leader>p :call TogglePaste()<cr>
 
 set conceallevel=0
 
