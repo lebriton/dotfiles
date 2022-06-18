@@ -12,49 +12,40 @@ call plug#begin('~/.vim/plugged')
 " --- defaults everyone can agree on ---
 Plug 'tpope/vim-sensible'
 
-" --- making Vim look good ---
+" --- UI/UX ---
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'ntpeters/vim-better-whitespace'
-
-" --- ... and ergonomic ---
 Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-surround'
-Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-unimpaired'
 
-" --- project managment ---
-Plug 'tpope/vim-eunuch'
+" --- MOVEMENTS ---
+Plug 'tpope/vim-surround'
+
+" --- PROJECT MANAGEMENT ---
 Plug 'airblade/vim-rooter'
 
-" --- fuzzy finding ---
+" --- FINDING STUFF ---
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" --- completion ---
+" --- AUTO-COMPLETION ---
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
 call plug#end()
 
-let mapleader=" "
+" Automatically source vimrc on save.
+autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
-" Add mouse support
-"set mouse=a
-
-" Colors
-set background=dark  	" Setting dark mode
-colorscheme gruvbox     " awesome colorscheme
+" THEME
+set background=dark
+colorscheme gruvbox
 highlight Normal ctermbg=none
 highlight LineNr ctermfg=blue
-highlight VertSplit ctermbg=none
 
 " UI Config
-set fillchars+=vert:│
 set number
-set relativenumber
 set nowrap
-set colorcolumn=80
 
 " Spaces & Tabs
 set expandtab           " insert spaces when tab is pressed
@@ -62,10 +53,9 @@ set tabstop=2           " insert x spaces when tab is pressed
 set shiftwidth=2        " change the number of space characters inserted for indentation
 
 " Moving
-set scrolloff=3         " Minumum lines to keep above and below cursor
 " visual shifting (does not exit Visual mode)
-vnoremap < <gv
-vnoremap > >gv
+vnoremap <s-tab> <gv
+vnoremap <tab> >gv
 " treat long lines as break lines (useful when moving around in them)
 nmap j gj
 nmap k gk
@@ -90,9 +80,6 @@ set undofile
 " Auto reload opened files
 " (feels like a hack)
 set autoread | au CursorHold * checktime | call feedkeys("lh")
-
-" Behave like other capitals
-nnoremap Y y$
 
 " Keep the cursor centered
 nnoremap n nzzzv
@@ -124,8 +111,6 @@ au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3
 
 " --- Plug 'junegunn/fzf.vim' ---
 nnoremap <C-p> :Files<Cr>
-nnoremap <leader>/ :BLines<Cr>
-nnoremap <C-b> :Buffers<Cr>
 nnoremap <C-t> :Tags<Cr>
 
 " --- Plug 'neoclide/coc.nvim' ---
@@ -182,7 +167,3 @@ let g:startify_bookmarks = [
 let g:startify_padding_left = 8
 let g:startify_custom_header = startify#pad(split(system('vim --version | head -1'), '\n'))
 let g:startify_change_to_dir = 0
-
-" ---------------------------------------------------------------------------
-" Automatically source vimrc on save.
-autocmd! bufwritepost $MYVIMRC source $MYVIMRC
