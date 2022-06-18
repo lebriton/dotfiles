@@ -38,10 +38,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
-" --- distraction-free editing ---
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-
 call plug#end()
 
 let mapleader=" "
@@ -194,18 +190,6 @@ let g:startify_change_to_dir = 0
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 set timeoutlen=500
 let g:which_key_disable_default_offset=1
-
-" --- Plug 'junegunn/goyo.vim' ---
-nnoremap <silent> <f8> :Goyo<cr>
-
-" --- Plug 'junegunn/limelight.vim' ---
-let g:limelight_conceal_ctermfg = 'gray'
-augroup goyo_config
-  autocmd! User GoyoEnter Limelight
-  autocmd User GoyoEnter set wrap
-  autocmd! User GoyoLeave Limelight!
-  autocmd User GoyoLeave source $MYVIMRC
-augroup END
 
 " --- Plug 'vimwiki/vimwiki' ---
 let g:vimwiki_list = [{'path': '~/Nextcloud/Notes/',
