@@ -9,8 +9,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'VundleVim/Vundle.vim'
-
 " --- defaults everyone can agree on ---
 Plug 'tpope/vim-sensible'
 
