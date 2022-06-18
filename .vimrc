@@ -17,6 +17,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'mhinz/vim-startify'
+Plug 'liuchengxu/vim-which-key'
 
 " --- MOVEMENTS ---
 Plug 'tpope/vim-surround'
@@ -33,6 +34,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
 call plug#end()
+
+let mapleader=" "
 
 " Automatically source vimrc on save.
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
@@ -167,3 +170,8 @@ let g:startify_bookmarks = [
 let g:startify_padding_left = 8
 let g:startify_custom_header = startify#pad(split(system('vim --version | head -1'), '\n'))
 let g:startify_change_to_dir = 0
+
+" --- Plug 'liuchengxu/vim-which-key' ---
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
+let g:which_key_disable_default_offset=1
