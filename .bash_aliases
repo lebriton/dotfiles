@@ -12,7 +12,7 @@ alias l='ls -CF'
 alias mkdir='mkdir -pv'
 
 bak() {
-  cp "$1" "$1.bak"
+  cp -r "$1" "$1.bak"
 }
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
