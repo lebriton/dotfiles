@@ -5,7 +5,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/workspace/projects ~/workspace/projects/godot -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(FZF_DEFAULT_COMMAND='find $PWD -maxdepth 5 -name .git -type d -prune | sed -e "s/\/.git$//"' fzf --prompt "Select project to open with tmux: ")
 fi
 
 if [[ -z $selected ]]; then
