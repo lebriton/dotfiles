@@ -58,6 +58,8 @@ set shiftwidth=2        " change the number of space characters inserted for ind
 
 " Moving
 " visual shifting (does not exit Visual mode)
+nnoremap <s-tab> <<
+nnoremap <tab> >>
 vnoremap <s-tab> <gv
 vnoremap <tab> >gv
 " treat long lines as break lines (useful when moving around in them)
