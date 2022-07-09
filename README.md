@@ -12,3 +12,10 @@ dotfiles checkout <branch-name>
 dotfiles config --local status.showUntrackedFiles no
 source ~/.bashrc
 ```
+
+```
+# coc.vim
+curl -sL install-node.vercel.app/lts | bash
+# Ag
+sudo apt-get install silversearcher-ag
+```
