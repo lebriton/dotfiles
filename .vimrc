@@ -124,7 +124,8 @@ au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3
 
 " --- Plug 'junegunn/fzf.vim' ---
 nnoremap <C-p> :Files<Cr>
-nnoremap <C-t> :Tags<Cr>
+nnoremap <leader>t :Tags<Cr>
+nnoremap <leader>a :Ag 
 
 " --- Plug 'neoclide/coc.nvim' ---
 let g:coc_disable_startup_warning = 1
