@@ -38,7 +38,7 @@ call plug#end()
 
 let mapleader=" "
 
-" Automatically source vimrc on save.
+" Experimental: automatically source vimrc on save.
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
 
 " THEME
