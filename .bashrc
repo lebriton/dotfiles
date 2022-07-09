@@ -48,8 +48,6 @@ prompt_command() {
 }
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PROMPT_COMMAND=prompt_command
-
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # -----------------------------------------------------------------------------
 # specific to current machine
 
