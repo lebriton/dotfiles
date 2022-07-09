@@ -103,10 +103,6 @@ nnoremap <C-k> :m .-2<CR>==
 " Work with azerty keyboards
 noremap ' <C-^>
 
-" Buffer navigation
-nnoremap <PageUp>   :bprevious<CR>
-nnoremap <PageDown> :bnext<CR>
-
 " Toggle paste mode
 " https://dev.to/andy4thehuynh/create-a-shortcut-to-toggle-paste-mode-with-vim-5205
 function! TogglePaste()
@@ -124,8 +120,6 @@ set conceallevel=0
 
 " --- Plug 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
-let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
-let g:airline#extensions#tabline#buffers_label = ''
 au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%% %L:%v'])
 
 " --- Plug 'junegunn/fzf.vim' ---
