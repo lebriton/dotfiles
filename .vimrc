@@ -110,10 +110,10 @@ nnoremap <PageDown> :bnext<CR>
 function! TogglePaste()
     if(&paste == 0)
         set paste
-        echo "Paste Mode Enabled"
+        echo "Mode de collage activé"
     else
         set nopaste
-        echo "Paste Mode Disabled"
+        echo "Mode de collage desactivé"
     endif
 endfunction
 map <leader>p :call TogglePaste()<cr>
