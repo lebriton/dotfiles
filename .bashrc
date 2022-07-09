@@ -31,20 +31,12 @@ export PATH=~/bin:$PATH
 export PATH=~/.cargo/bin:$PATH # rust
 
 prompt_command() {
-  light_green="\[\e[1;32m\]"
-  light_red="\[\e[1;31m\]"
+  PROMPT_DIRTRIM=0
   blue="\[\e[1;34m\]"
   gray="\[\e[0;37m\]"
   reset="\[\e[m\]"
-
-  local status="$?"
-  local status_color=""
-  if [ $status != 0 ]; then
-    status_color=$light_red
-  else
-    status_color=$light_green
-  fi
-  export PS1="${gray}$(__git_ps1 '(%s) ')${reset}${status_color}➜${reset} ${blue}\w${reset} "
+  bold="\[\e[01m\]"
+  export PS1="${reset}${gray}$(__git_ps1 '(%s) ')${reset}${bold}\u@\h${reset}:${blue}\w${reset}\$ "
 }
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PROMPT_COMMAND=prompt_command
