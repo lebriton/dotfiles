@@ -5,7 +5,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(FZF_DEFAULT_COMMAND='find $PWD -maxdepth 5 -name .git -type d -prune | sed -e "s/\/.git$//"' fzf --prompt "Select project to open with tmux: ")
+    selected=$(FZF_DEFAULT_COMMAND='find $PWD -maxdepth 3 -name .git -type d -prune | sed -e "s/\/.git$//"' fzf --prompt "Select project to open with tmux: ")
 fi
 
 if [[ -z $selected ]]; then
