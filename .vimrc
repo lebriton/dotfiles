@@ -118,6 +118,8 @@ map <leader>p :call TogglePaste()<cr>
 
 set conceallevel=0
 
+nnoremap <leader>w <C-w>
+
 " --- Plug 'vim-airline/vim-airline' ---
 let g:airline_theme = 'gruvbox'
 au User AirlineAfterInit  :let g:airline_section_z = airline#section#create(['%3p%% %L:%v'])
