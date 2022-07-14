@@ -43,4 +43,4 @@ export PROMPT_COMMAND=prompt_command
 # -----------------------------------------------------------------------------
 # specific to current machine
 
-xinput disable "PS/2 Generic Mouse"
+xinput disable "PS/2 Generic Mouse" 2>/dev/null
