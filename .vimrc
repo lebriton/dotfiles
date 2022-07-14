@@ -25,6 +25,7 @@ Plug 'tpope/vim-surround'
 " --- PROJECT MANAGEMENT ---
 Plug 'airblade/vim-rooter'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " --- FINDING STUFF ---
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
