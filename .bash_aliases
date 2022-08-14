@@ -16,7 +16,8 @@ bak() {
 }
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias d='dotfiles'
+alias d='docker'
+alias dc='docker-compose'
 alias v='vim'
 alias g='git'
 alias t='tmux'
