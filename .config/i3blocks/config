@@ -1,0 +1,16 @@
+command=~/.config/i3blocks/$BLOCK_NAME
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
+
+[cpu]
+label=CPU
+# https://stackoverflow.com/questions/9229333/how-to-get-overall-cpu-usage-e-g-57-on-linux
+command=mpstat | grep -A 5 "%idle" | tail -n 1 | awk -F " " '{print 100 - $ 12"%"}'a
+interval=5
+
+[memory]
+label=MEM
+command= free -m | grep 'Mem:' | awk '{ print int($3/$2*100) "%"}'
+interval=5
