@@ -165,6 +165,7 @@ let g:startify_bookmarks = [
         \ {'ba': '~/.bash_aliases'},
         \ {'bb': '~/.bash_bindings'},
         \ {'gc': '~/.gitconfig'},
+        \ {'i': '~/.config/i3/config'},
         \ {'t': '~/.tmux.conf'},
         \ ]
 let g:startify_padding_left = 8
