@@ -5,15 +5,15 @@ interval=5
 command=date '+%Y-%m-%d %H:%M:%S'
 
 [cpu]
-label=CPU
+label=CPU 
 # https://stackoverflow.com/questions/9229333/how-to-get-overall-cpu-usage-e-g-57-on-linux
 command=mpstat | grep -A 5 "%idle" | tail -n 1 | awk -F " " '{print 100 - $ 12"%"}'a
 
 [memory]
-label=MEM
+label=MEM 
 
 [volume]
-label=VOL
+label=VOL 
 signal=1
 interval=once
 LONG_FORMAT=${VOL}%
