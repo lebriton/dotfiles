@@ -11,7 +11,6 @@ command=mpstat | grep -A 5 "%idle" | tail -n 1 | awk -F " " '{print 100 - $ 12"%
 
 [memory]
 label=MEM
-command= free -m | grep 'Mem:' | awk '{ print int($3/$2*100) "%"}'
 
 [volume]
 label=VOL
