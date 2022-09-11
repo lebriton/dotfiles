@@ -104,6 +104,8 @@ nnoremap <C-k> :m .-2<CR>==
 " Work with azerty keyboards
 noremap ' <C-^>
 
+xnoremap <leader>p "_dP
+
 " Toggle paste mode
 " https://dev.to/andy4thehuynh/create-a-shortcut-to-toggle-paste-mode-with-vim-5205
 function! TogglePaste()
@@ -115,7 +117,7 @@ function! TogglePaste()
         echo "Mode de collage desactivé"
     endif
 endfunction
-map <leader>p :call TogglePaste()<cr>
+" map <leader>p :call TogglePaste()<cr>
 
 set conceallevel=0
 
