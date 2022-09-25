@@ -49,7 +49,8 @@ This function should only modify configuration layer settings."
      syntax-checking
      (treemacs :variables
                treemacs-use-git-mode 'deferred)
-     version-control)
+     version-control
+     xclipboard)
 
 
    ;; List of additional packages that will be installed without being wrapped
