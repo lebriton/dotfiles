@@ -32,8 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(python
-     auto-completion
+   '(auto-completion
      ;; better-defaults
      emacs-lisp
      git
@@ -41,14 +40,16 @@ This function should only modify configuration layer settings."
      lsp
      markdown
      multiple-cursors
+     python
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     version-control
-     treemacs)
+     (treemacs :variables
+               treemacs-use-git-mode 'deferred)
+     version-control)
 
 
    ;; List of additional packages that will be installed without being wrapped
