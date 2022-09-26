@@ -32,3 +32,5 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 # Required to 'make && sudo make install' suckless tools
 # These are no present by default on Ubuntu 20.04 LTS
 #sudo apt-get install -y libx11-dev libxft-dev libxinerama-dev
+
+mkdir -p ~/workspace/projects
