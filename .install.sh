@@ -12,14 +12,11 @@ sudo apt-get install -y \
   curl \
   fzf \
   git \
-  npm \
   python3 \
   python3-pip \
   tmux \
   vim \
   wget
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-#nvm install node
 
 sudo apt-get install -y \
   blueman \
