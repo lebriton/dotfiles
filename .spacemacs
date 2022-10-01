@@ -50,7 +50,7 @@ This function should only modify configuration layer settings."
      (treemacs :variables
                treemacs-use-git-mode 'deferred)
      version-control
-     xclipboard)
+     (xclipboard :variables xclipboard-enable-cliphist t))
 
 
    ;; List of additional packages that will be installed without being wrapped
