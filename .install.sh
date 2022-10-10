@@ -17,7 +17,7 @@ sudo apt-get install -y \
   python3-pip \
   tmux \
   vim \
-  wget
+  wget \
 
 sudo apt-get install -y \
   blueman \
@@ -26,11 +26,33 @@ sudo apt-get install -y \
   dunst \
   feh \
   i3 \
+  rxvt-unicode \
+  xbacklight \
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
+mkdir -p ~/workspace/projects
+
 # Required to 'make && sudo make install' suckless tools
 # These are no present by default on Ubuntu 20.04 LTS
-#sudo apt-get install -y libx11-dev libxft-dev libxinerama-dev
+sudo apt-get install -y libx11-dev libxft-dev libxinerama-dev
 
-mkdir -p ~/workspace/projects
+if [[ ! -d "$HOME/workspace/projects/dmenu" ]]; then
+  cd ~/workspace/projects
+  git clone https://gitlab.com/bminusl/dmenu.git
+  cd dmenu
+  make
+  sudo make install
+fi
+
+sudo apt-get install -y dh-autoreconf
+
+if [[ ! -d "$HOME/workspace/projects/i3blocks" ]]; then
+  cd ~/workspace/projects
+  git clone https://github.com/vivien/i3blocks
+  cd i3blocks
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+fi
