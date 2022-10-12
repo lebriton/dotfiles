@@ -20,6 +20,7 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
+  arandr \
   blueman \
   cbatticon \
   compton \
@@ -27,6 +28,7 @@ sudo apt-get install -y \
   feh \
   i3 \
   rxvt-unicode \
+  slock \
   xbacklight \
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
