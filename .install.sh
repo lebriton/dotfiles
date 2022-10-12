@@ -26,6 +26,7 @@ sudo apt-get install -y \
   compton \
   dunst \
   feh \
+  flameshot \
   i3 \
   rxvt-unicode \
   slock \
