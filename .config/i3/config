@@ -33,6 +33,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id cbatticon
 exec --no-startup-id compton
+exec --no-startup-id flameshot
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3blocks_volume pkill -SIGRTMIN+1 i3blocks
