@@ -55,8 +55,8 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec i3-dmenu-desktop --dmenu="dmenu -l 10 -g 7"
-bindsym $mod+Shift+d exec dmenu_run -l 10 -g 7
+bindsym $mod+d exec i3-dmenu-desktop --dmenu="dmenu -i -l 10 -g 7"
+bindsym $mod+Shift+d exec dmenu_run -i -l 10 -g 7
 bindsym $mod+Control+p exec $HOME/bin/dmenu-gpaste
 
 # change focus
