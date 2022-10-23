@@ -27,6 +27,7 @@ sudo apt-get install -y \
   dunst \
   feh \
   flameshot \
+  gpaste \
   i3 \
   rxvt-unicode \
   slock \
