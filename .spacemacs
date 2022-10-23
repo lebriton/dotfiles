@@ -32,13 +32,12 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(yaml
-     html
-     auto-completion
+   '(auto-completion
      ;; better-defaults
      emacs-lisp
      git
      helm
+     html
      lsp
      markdown
      multiple-cursors
@@ -52,7 +51,8 @@ This function should only modify configuration layer settings."
      (treemacs :variables
                treemacs-use-git-mode 'deferred)
      version-control
-     (xclipboard :variables xclipboard-enable-cliphist t))
+     (xclipboard :variables xclipboard-enable-cliphist t)
+     yaml)
 
 
    ;; List of additional packages that will be installed without being wrapped
