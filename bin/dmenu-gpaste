@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+from subprocess import run
+
+
+line_list = run(
+    ["gpaste-client", "--oneline"],
+    capture_output=True,
+    encoding="UTF-8",
+).stdout.splitlines()
+
+
+lines_dict = {}
+for line in line_list:
+    uuid, content = line.split(":", 1)
+    content = content[1:]
+    lines_dict[content] = uuid
+
+
+selection = run(
+    ["dmenu", "-l", "30"],
+    input="\n".join(lines_dict),
+    capture_output=True,
+    encoding="UTF-8",
+).stdout.removesuffix("\n")
+uuid = lines_dict[selection]
+
+
+run(["gpaste-client", "select", uuid], encoding="UTF-8")

@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+from subprocess import run
+
+
+options = {
+    "Recharger i3wm": "i3-msg restart",
+    "Éteindre la machine": "i3-nagbar -t warning -m 'Voulez-vous vraiment éteindre la machine ?' -B 'Oui, éteindre la machine' 'shutdown now'",
+    "Redémarrer la machine": "i3-nagbar -t warning -m 'Voulez-vous vraiment redémarrer la machine ?' -B 'Oui, redémarrer la machine' 'reboot'",
+}
+
+
+selection = run(
+    ["dmenu", "-l", str(len(options)), "-nb", "#ffa800", "-nf", "#0b0700"],
+    input="\n".join(options),
+    capture_output=True,
+    encoding="UTF-8",
+).stdout.removesuffix("\n")
+
+
+command = options[selection]
+run(command, shell=True)

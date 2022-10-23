@@ -55,12 +55,9 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 10 -g 7
-bindsym $mod+Shift+d exec i3-dmenu-desktop
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec i3-dmenu-desktop --dmenu="dmenu -l 10 -g 7"
+bindsym $mod+Shift+d exec dmenu_run -l 10 -g 7
+bindsym $mod+Control+p exec $HOME/bin/dmenu-gpaste
 
 # change focus
 bindsym $mod+h focus left
@@ -75,18 +72,18 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+Control+l split h
+#bindsym $mod+Control+l split h
 
 # split in vertical orientation
-bindsym $mod+Control+j split v
+#bindsym $mod+Control+j split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Control+s layout stacking
+#bindsym $mod+Control+s layout stacking
 bindsym $mod+Control+t layout tabbed
-bindsym $mod+Control+e layout toggle split
+#bindsym $mod+Control+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -139,12 +136,8 @@ bindsym $mod+Shift+p move container to workspace $ws10; workspace $ws10
 
 workspace_layout tabbed
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+f restart
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# control the system
+bindsym $mod+s exec $HOME/bin/control-system
 
 focus_follows_mouse no
 
@@ -156,13 +149,12 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 1 px or 1 ppt
+        bindsym j resize grow height 1 px or 1 ppt
+        bindsym k resize shrink height 1 px or 1 ppt
+        bindsym l resize grow width 1 px or 1 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
+        # back to normal: Escape or $mod+r
         bindsym Escape mode "default"
         bindsym $mod+Control+r mode "default"
 }
@@ -180,4 +172,4 @@ bar {
 # specific to current machine
 
 exec --no-startup-id xrandr --output HDMI2 --auto --left-of eDP1
-exec --no-startup-id xinput set-prop "Logitech Gaming Mouse G502" "libinput Accel Speed" -.95
+exec --no-startup-id xinpu
