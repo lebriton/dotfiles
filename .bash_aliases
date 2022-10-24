@@ -1,3 +1,7 @@
+# colors
+alias ls='ls --color'
+alias grep='grep --color'
+
 # confirm before overwriting something
 alias cp="cp -i"
 alias mv="mv -i"
