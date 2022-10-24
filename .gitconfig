@@ -25,3 +25,4 @@
 	rba = rebase --abort
 	fx = !sh -c 'git commit -m \"This fixes commit $(git rev-parse $1).\" --fixup \"$@\"' -
 	wip = commit -am WIP --no-verify
+	cp = cherry-pick
