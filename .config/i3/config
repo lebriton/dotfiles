@@ -172,4 +172,4 @@ bar {
 # specific to current machine
 
 exec --no-startup-id xrandr --output HDMI2 --auto --left-of eDP1
-exec --no-startup-id xinpu
+exec --no-startup-id xinput set-prop "Logitech Gaming Mouse G502" "libinput Accel Speed" -.95
