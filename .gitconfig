@@ -28,3 +28,4 @@
 	cp = cherry-pick
 	p = push
 	pl = pull
+	plr = pull --rebase
