@@ -29,3 +29,8 @@ interval=10
 
 [dunst]
 interval=once
+
+[control-multimedia]
+full_text=⚙️
+command=$HOME/bin/control-multimedia
+interval=0
