@@ -3,9 +3,9 @@
 if [[ ! -d "$HOME/.dotfiles" ]]; then
   git clone --bare git@gitlab.com:bminusl/dotfiles.git $HOME/.dotfiles
   # or git clone --bare https://gitlab.com/bminusl/dotfiles.git $HOME/.dotfiles
-  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout main -f
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 fi
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout main -f
 
 sudo apt-get update
 sudo apt-get install -y \
