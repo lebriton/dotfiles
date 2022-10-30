@@ -22,5 +22,10 @@ interval=once
 LONG_FORMAT=${VOL}%
 MUTED_COLOR=#444444
 
+[docker]
+label=🐳 
+command=docker ps -q | wc -l
+interval=10
+
 [dunst]
 interval=once
