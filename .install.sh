@@ -9,6 +9,7 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout main -f
 
 sudo apt-get update
 sudo apt-get install -y \
+  btop \
   curl \
   emacs \
   fzf \

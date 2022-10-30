@@ -71,3 +71,9 @@ END {
 	}
 }
 ' /proc/meminfo
+
+case "$BLOCK_BUTTON" in
+  1|2|3)
+    i3-msg -q "exec urxvt -e btop"
+    ;;
+esac

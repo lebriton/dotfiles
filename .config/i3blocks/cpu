@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# https://stackoverflow.com/questions/9229333/how-to-get-overall-cpu-usage-e-g-57-on-linux
+mpstat | grep -A 5 "%idle" | tail -n 1 | awk -F " " '{print 100 - $ 12"%"}'a
+
+case "$BLOCK_BUTTON" in
+  1|2|3)
+    i3-msg -q "exec urxvt -e btop"
+    ;;
+esac
