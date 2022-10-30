@@ -168,6 +168,9 @@ bar {
         status_command i3blocks
 }
 
+# https://github.com/vivien/i3blocks-contrib/tree/master/calendar
+for_window [class="Yad"] floating enable
+
 # -----------------------------------------------------------------------------
 # specific to current machine
 

@@ -35,6 +35,8 @@ sudo apt-get install -y \
   rxvt-unicode \
   slock \
   xbacklight \
+  xdotool \
+  yad \
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
