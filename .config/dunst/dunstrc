@@ -431,6 +431,14 @@
 #
 # vim: ft=cfg
 
+[cbatticon]
+    appname = "cbatticon"
+    new_icon = "battery-symbolic"
+
 [i3blocks-volume]
     appname = "i3blocks-volume"
     history_ignore = yes
+
+[network-manager]
+    appname = "NetworkManager"
+    new_icon = "network-wireless-symbolic"
