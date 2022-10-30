@@ -7,6 +7,7 @@ options = {
     "Recharger i3wm": "i3-msg restart",
     "Mettre la machine en veille": "(slock&) && systemctl suspend",
     #"Mettre la machine en hibernation": "(slock&) && systemctl hibernate",
+    "Contrôler le multimédia...": "$HOME/bin/control-multimedia",
     "Se déconnecter de la session...": "i3-nagbar -t warning -m 'Voulez-vous vraiment vous déconnecter de la session actuelle ?' -B 'Oui, je souhaite me déconnecter' 'i3-msg exit'",
     "Éteindre la machine...": "i3-nagbar -t warning -m 'Voulez-vous vraiment éteindre la machine ?' -B 'Oui, éteindre la machine' 'systemctl poweroff'",
     "Redémarrer la machine...": "i3-nagbar -t warning -m 'Voulez-vous vraiment redémarrer la machine ?' -B 'Oui, redémarrer la machine' 'systemctl reboot'",

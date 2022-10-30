@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+selection=$(echo -e "Son\nÉcrans" | dmenu -l 2)
+
+case $selection in
+  Son) pavucontrol ;;
+  Écrans) arandr ;;
+esac
