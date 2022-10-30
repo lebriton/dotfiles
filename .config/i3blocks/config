@@ -21,3 +21,6 @@ signal=1
 interval=once
 LONG_FORMAT=${VOL}%
 MUTED_COLOR=#444444
+
+[dunst]
+interval=once
