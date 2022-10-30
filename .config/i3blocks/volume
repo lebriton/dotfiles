@@ -106,11 +106,7 @@ function set_default_playback_device_next {
 }
 
 case "$BLOCK_BUTTON" in
-    1) set_default_playback_device_next ;;
-    2) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY toggle ;;
-    3) set_default_playback_device_next -1 ;;
-    4) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%+ ;;
-    5) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%- ;;
+    1|2|3) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY toggle ;;
 esac
 
 
@@ -172,7 +168,12 @@ sed 's/.*= "\(.*\)".*/\1/')
     fi
 
     # XXX: this is placed here for convenience
-    [[ $BLOCK_BUTTON -ne 1 ]] && dunstify --appname i3blocks-volume --urgency low --icon "$icon" "Volume : $VOL%" --timeout 2000 --replace 10001
+    case "$BLOCK_BUTTON" in
+        1|2|3) ;;
+        *)
+          dunstify --appname i3blocks-volume --urgency low --icon "$icon" "Volume : $VOL%" --timeout 2000 --replace 10001
+          ;;
+    esac
 }
 
 print_block

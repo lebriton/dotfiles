@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-[[ $BLOCK_BUTTON -eq 1 ]] && dunstctl set-paused toggle
+case "$BLOCK_BUTTON" in
+  1|2|3)
+    dunstctl set-paused toggle
+    ;;
+esac
 
 if $(dunstctl is-paused) -eq "true"; then
   echo "🔕"
