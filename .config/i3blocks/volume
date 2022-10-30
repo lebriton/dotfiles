@@ -168,12 +168,7 @@ sed 's/.*= "\(.*\)".*/\1/')
     fi
 
     # XXX: this is placed here for convenience
-    case "$BLOCK_BUTTON" in
-        1|2|3) ;;
-        *)
-          dunstify --appname i3blocks-volume --urgency low --icon "$icon" "Volume : $VOL%" --timeout 2000 --replace 10001
-          ;;
-    esac
+    dunstify --appname i3blocks-volume --urgency low --icon "$icon" "Volume : $VOL%" --timeout 2000 --replace 10001
 }
 
 print_block
