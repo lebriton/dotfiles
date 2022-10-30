@@ -20,6 +20,7 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
+  amixer \
   arandr \
   blueman \
   cbatticon \
@@ -29,6 +30,8 @@ sudo apt-get install -y \
   flameshot \
   gpaste \
   i3 \
+  pactl \
+  pavucontrol \
   rxvt-unicode \
   slock \
   xbacklight \

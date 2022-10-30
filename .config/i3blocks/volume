@@ -156,12 +156,12 @@ sed 's/.*= "\(.*\)".*/\1/')
     fi
 
     if [[ $MUTED =~ "no" ]] ; then
-        SYMB=$AUDIO_HIGH_SYMBOL
-        [[ $VOL -le $AUDIO_MED_THRESH ]] && SYMB=$AUDIO_MED_SYMBOL
-        [[ $VOL -le $AUDIO_LOW_THRESH ]] && SYMB=$AUDIO_LOW_SYMBOL
+        SYMB=$AUDIO_HIGH_SYMBOL && icon=audio-volume-high-symbolic
+        [[ $VOL -le $AUDIO_MED_THRESH ]] && SYMB=$AUDIO_MED_SYMBOL && icon=audio-volume-medium-symbolic
+        [[ $VOL -le $AUDIO_LOW_THRESH ]] && SYMB=$AUDIO_LOW_SYMBOL && icon=audio-volume-low-symbolic
         COLOR=$DEFAULT_COLOR
     else
-        SYMB=$AUDIO_MUTED_SYMBOL
+        SYMB=$AUDIO_MUTED_SYMBOL && icon=audio-volume-muted-symbolic
         COLOR=$MUTED_COLOR
     fi
 
@@ -170,6 +170,9 @@ sed 's/.*= "\(.*\)".*/\1/')
         print_format "$SHORT_FORMAT" $COLOR
         echo $COLOR
     fi
+
+    # XXX: this is placed here for convenience
+    dunstify --appname i3blocks-volume --urgency low --icon "$icon" "Volume : $VOL%" --timeout 2000 --replace 10001
 }
 
 print_block
