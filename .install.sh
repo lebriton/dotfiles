@@ -21,7 +21,7 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
-  amixer \
+  alsa-tools \
   arandr \
   blueman \
   cbatticon \
@@ -31,7 +31,7 @@ sudo apt-get install -y \
   flameshot \
   gpaste \
   i3 \
-  pactl \
+  pulseaudio-utils \
   pavucontrol \
   rxvt-unicode \
   slock \
