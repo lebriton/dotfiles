@@ -41,7 +41,7 @@ sudo apt-get install -y \
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
-mkdir -p ~/workspace/projects
+mkdir -p ~/workspace/{bin,projects}
 
 # Required to 'make && sudo make install' suckless tools
 # These are no present by default on Ubuntu 20.04 LTS
