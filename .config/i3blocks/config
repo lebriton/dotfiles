@@ -28,8 +28,3 @@ interval=10
 
 [dunst]
 interval=once
-
-[multimedia]
-full_text=⚙️
-interval=0
-Y=-40
