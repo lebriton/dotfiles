@@ -36,6 +36,7 @@ sudo apt-get install -y \
   rofi \
   rxvt-unicode \
   slock \
+  ttf-dejavu \
   xbacklight \
   xdotool \
   yad \
