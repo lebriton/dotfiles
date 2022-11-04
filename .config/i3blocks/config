@@ -4,8 +4,8 @@ interval=5
 [calendar]
 interval=1
 DATEFMT=+%Y-%m-%d %H:%M:%S
-HEIGHT=180
-WIDTH=220
+HEIGHT=300
+WIDTH=400
 
 [cpu]
 label=CPU 
