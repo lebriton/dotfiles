@@ -9,7 +9,6 @@ fi
 
 sudo apt-get update
 sudo apt-get install -y \
-  btop \
   curl \
   emacs \
   fzf \
@@ -21,6 +20,7 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
+  btop \
   alsa-tools \
   arandr \
   blueman \
@@ -33,6 +33,7 @@ sudo apt-get install -y \
   i3 \
   pulseaudio-utils \
   pavucontrol \
+  rofi \
   rxvt-unicode \
   slock \
   xbacklight \
