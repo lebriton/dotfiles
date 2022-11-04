@@ -141,7 +141,7 @@ bindsym $mod+Shift+p move container to workspace $ws10; workspace $ws10
 workspace_layout tabbed
 
 # control the system
-bindsym $mod+s exec $HOME/bin/control-system
+bindsym $mod+s exec $HOME/.config/rofi/scripts/powermenu_t3
 
 focus_follows_mouse no
 
