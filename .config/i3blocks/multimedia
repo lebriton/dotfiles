@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+WIDTH=${WIDTH:-200}
+HEIGHT=${HEIGHT:-200}
+
+X=${X:-$(($BLOCK_X - $WIDTH / 2))}
+Y=${Y:-$(($BLOCK_Y - $HEIGHT))}
+
+selection=$(echo -e "🔉 Son\n📺 Écrans\n🗃️ Fichiers" | yad \
+  --list --column "Configurer/Ouvrir..." \
+  --undecorated \
+  --fixed \
+  --close-on-unfocus \
+  --no-buttons \
+  --width $WIDTH --height $HEIGHT \
+  --posx=$X --posy=$Y \
+)
+
+case "$selection" in
+  Son*) pavucontrol ;;
+  Écrans*) arandr ;;
+  Fichiers*) nautilus ;;
+esac
