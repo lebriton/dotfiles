@@ -39,6 +39,9 @@ sudo apt-get install -y \
   xdotool \
   yad \
 
+sudo apt-get install -y \
+  yaru-theme-icon
+
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 mkdir -p ~/workspace/{bin,projects}
