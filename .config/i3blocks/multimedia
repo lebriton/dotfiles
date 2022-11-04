@@ -17,7 +17,7 @@ selection=$(echo -e "🔉 Son\n📺 Écrans\n🗃️ Fichiers" | yad \
 )
 
 case "$selection" in
-  Son*) pavucontrol ;;
-  Écrans*) arandr ;;
-  Fichiers*) nautilus ;;
+  *Son*) pavucontrol ;;
+  *Écrans*) arandr ;;
+  *Fichiers*) nautilus ;;
 esac
