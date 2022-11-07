@@ -29,6 +29,7 @@ sudo apt-get install -y \
   dunst \
   feh \
   flameshot \
+  fonts-dejavu \
   gpaste \
   i3 \
   pulseaudio-utils \
@@ -36,12 +37,9 @@ sudo apt-get install -y \
   rofi \
   rxvt-unicode \
   slock \
-  ttf-dejavu \
   xbacklight \
   xdotool \
   yad \
-
-sudo apt-get install -y \
   yaru-theme-icon
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
