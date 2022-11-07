@@ -71,3 +71,6 @@ if [[ ! -d "$HOME/workspace/projects/i3blocks" ]]; then
   make
   sudo make install
 fi
+
+# "Install" font
+fc-cache
