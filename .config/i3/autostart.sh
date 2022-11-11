@@ -4,6 +4,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id cbatticon
 exec --no-startup-id compton
 exec --no-startup-id flameshot
+exec --no-startup-id gpaste-client
 exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
