@@ -32,6 +32,7 @@ sudo apt-get install -y \
   fonts-dejavu \
   gpaste \
   i3 \
+  imagemagick \
   pulseaudio-utils \
   pavucontrol \
   rofi \
