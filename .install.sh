@@ -46,20 +46,7 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 mkdir -p ~/workspace/{bin,projects}
 
-# Required to 'make && sudo make install' suckless tools
-# These are no present by default on Ubuntu 20.04 LTS
-sudo apt-get install -y libx11-dev libxft-dev libxinerama-dev
-
-if [[ ! -d "$HOME/workspace/projects/dmenu" ]]; then
-  cd ~/workspace/projects
-  git clone https://gitlab.com/bminusl/dmenu.git
-  cd dmenu
-  make
-  sudo make install
-fi
-
 sudo apt-get install -y dh-autoreconf
-
 if [[ ! -d "$HOME/workspace/projects/i3blocks" ]]; then
   cd ~/workspace/projects
   git clone https://github.com/vivien/i3blocks
