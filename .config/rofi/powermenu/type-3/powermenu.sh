@@ -89,7 +89,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-    slock
+    $HOME/bin/my-lock
         ;;
     $suspend)
 		run_cmd --suspend

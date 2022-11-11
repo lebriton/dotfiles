@@ -36,7 +36,6 @@ sudo apt-get install -y \
   pavucontrol \
   rofi \
   rxvt-unicode \
-  slock \
   xbacklight \
   xdotool \
   xss-lock \
