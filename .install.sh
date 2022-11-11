@@ -39,6 +39,7 @@ sudo apt-get install -y \
   slock \
   xbacklight \
   xdotool \
+  xss-lock \
   yad \
   yaru-theme-icon
 
