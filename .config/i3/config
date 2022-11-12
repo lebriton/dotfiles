@@ -44,7 +44,6 @@ bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec $HOME/.config/rofi/scripts/launcher_t3
-bindsym $mod+Control+p exec $HOME/bin/dmenu-gpaste
 
 # change focus
 bindsym $mod+h focus left
