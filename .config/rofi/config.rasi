@@ -182,3 +182,4 @@ configuration {
 	me-accept-custom: "Control+MouseDPrimary";
 */
 }
+@theme "gruvbox-dark"
