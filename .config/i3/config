@@ -168,7 +168,6 @@ for_window [class="Yad"] floating enable
 #assign [class="firefox"] $ws1
 assign [class="Emacs"] $ws1
 assign [class="obsidian"] $ws2
-assign [class="Steam"] $ws5
 assign [class="Protonvpn"] $ws7
 assign [class="thunderbird"] $ws8
 assign [class="discord"] $ws9

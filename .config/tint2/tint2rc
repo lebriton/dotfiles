@@ -171,7 +171,6 @@ launcher_item_app = gimp.desktop
 launcher_item_app = org.gnome.Nautilus.desktop
 launcher_item_app = obsidian.desktop
 launcher_item_app = protonvpn.desktop
-launcher_item_app = steam.desktop
 launcher_item_app = thunderbird.desktop
 
 #-------------------------------------
