@@ -130,6 +130,8 @@ workspace_layout tabbed
 # control the system
 bindsym $mod+s exec $HOME/.config/rofi/scripts/powermenu_t3
 
+bindsym --release --border button2 kill
+
 focus_follows_mouse no
 
 # resize window (you can also use the mouse for that)
