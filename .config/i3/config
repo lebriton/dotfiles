@@ -163,3 +163,12 @@ bar {
 
 # https://github.com/vivien/i3blocks-contrib/tree/master/calendar
 for_window [class="Yad"] floating enable
+
+# NB: use xprop to get the class
+assign [class="firefox"] $ws1
+assign [class="emacs"] $ws1
+assign [class="obsidian"] $ws2
+assign [class="Steam"] $ws5
+assign [class="protonvpn"] $ws7
+assign [class="thunderbird"] $ws8
+assign [class="discord"] $ws9
