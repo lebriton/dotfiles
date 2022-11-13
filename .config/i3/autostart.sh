@@ -6,6 +6,7 @@ compton &
 flameshot &
 gpaste-client &
 nm-applet &
+tint2 &
 xss-lock --transfer-sleep-lock -- $HOME/bin/my-lock &
 
 # -----------------------------------------------------------------------------
