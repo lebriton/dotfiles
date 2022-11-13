@@ -9,6 +9,8 @@ nm-applet &
 tint2 &
 xss-lock --transfer-sleep-lock -- $HOME/bin/my-lock &
 
+~/workspace/bin/Nextcloud*.AppImage
+
 # -----------------------------------------------------------------------------
 # specific to current machine
 
