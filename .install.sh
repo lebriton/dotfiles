@@ -61,3 +61,9 @@ fi
 
 # "Install" font
 fc-cache
+
+if [[ ! -d "$HOME/workspace/projects/Gruvbox-Wallpapers" ]]; then
+  cd ~/workspace/projects
+  git clone https://github.com/lvmaoa/Gruvbox-Wallpapers.git
+  (crontab -l || echo; echo "*/5 * * * * DISPLAY=:0 feh --bg-fill --randomize ~/workspace/projects/Gruvbox-Wallpapers/*.{png,jpg}" ) | crontab
+fi
