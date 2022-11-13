@@ -20,12 +20,13 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
-  btop \
   alsa-tools \
   arandr \
   blueman \
+  btop \
   cbatticon \
   compton \
+  cron \
   dunst \
   feh \
   flameshot \
