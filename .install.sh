@@ -28,7 +28,6 @@ sudo apt-get install -y \
   compton \
   cron \
   dunst \
-  feh \
   flameshot \
   fonts-dejavu \
   gpaste \
@@ -62,11 +61,3 @@ fi
 
 # "Install" font
 fc-cache
-
-if [[ ! -d "$HOME/.wallpapers" ]]; then
-  git clone https://gitlab.com/bminusl/wallpapers.git $HOME/.wallpapers
-  (crontab -l || echo; echo "*/5 * * * * DISPLAY=:0 ~/bin/change-wallpaper" ) | crontab
-else
-  cd $HOME/.wallpapers
-  git pull --rebase
-fi
