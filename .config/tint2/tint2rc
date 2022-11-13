@@ -62,7 +62,7 @@ border_color_pressed = #000000 100
 
 #-------------------------------------
 # Panel
-panel_items = L
+panel_items = LTPP
 panel_size = 100% 64
 panel_margin = 0 0
 panel_padding = 2 0 2
@@ -154,7 +154,6 @@ launcher_item_app = org.gnome.gedit.desktop
 launcher_item_app = gimp.desktop
 launcher_item_app = org.gnome.Nautilus.desktop
 launcher_item_app = obsidian.desktop
-launcher_item_app = pavucontrol.desktop
 launcher_item_app = protonvpn.desktop
 launcher_item_app = signal-desktop.desktop
 launcher_item_app = steam.desktop
@@ -206,3 +205,15 @@ tooltip_padding = 4 4
 tooltip_background_id = 5
 tooltip_font_color = #dddddd 100
 
+#-------------------------------------
+# Button
+button = new
+button_icon = /usr/share/icons/Yaru/48x48/categories/preferences-system-sound.png
+button_tooltip = Configurer le son (pavucontrol)
+button_lclick_command = pavucontrol
+button_max_icon_size = 48
+button = new
+button_icon = /usr/share/icons/Yaru/48x48/categories/preferences-desktop-display.png
+button_tooltip = Configurer les écrans (arandr)
+button_lclick_command = arandr
+button_max_icon_size = 48
