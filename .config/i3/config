@@ -165,7 +165,7 @@ bar {
 for_window [class="Yad"] floating enable
 
 # NB: use xprop to get the class
-assign [class="firefox"] $ws1
+#assign [class="firefox"] $ws1
 assign [class="Emacs"] $ws1
 assign [class="obsidian"] $ws2
 assign [class="Steam"] $ws5
