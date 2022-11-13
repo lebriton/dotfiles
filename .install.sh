@@ -65,7 +65,7 @@ fc-cache
 
 if [[ ! -d "$HOME/.wallpapers" ]]; then
   git clone https://gitlab.com/bminusl/wallpapers.git $HOME/.wallpapers
-  (crontab -l || echo; echo "*/5 * * * * DISPLAY=:0 feh --bg-fill --randomize $(ls -d ~/.wallpapers/*.{jpg,png} | sort -R | head -1)" ) | crontab
+  (crontab -l || echo; echo "*/5 * * * * DISPLAY=:0 ~/bin/change-wallpaper" ) | crontab
 else
   cd $HOME/.wallpapers
   git pull --rebase

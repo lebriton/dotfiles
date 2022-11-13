@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+feh --bg-fill --randomize $(ls -d ~/.wallpapers/*.{jpg,png} | sort -R | head -1)
