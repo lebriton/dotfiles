@@ -71,3 +71,8 @@ URxvt.keysym.C-S-0x56: eval:paste_clipboard
 ! 95% transparency
 urxvt*depth: 32
 urxvt*background: rgba:2800/2800/2800/f300
+
+! https://wiki.archlinux.org/title/Rxvt-unicode#Clickable_URLs
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
