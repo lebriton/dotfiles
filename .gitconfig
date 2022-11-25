@@ -1,31 +1,31 @@
 [user]
-	email = contact@brytonlacquement.com
-	name = Bryton Lacquement
+  email = contact@brytonlacquement.com
+  name = Bryton Lacquement
 [core]
-	editor = vim
+  editor = vim
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	who = shortlog -sne
-	undo = reset --soft HEAD^
-	unstage = reset HEAD
-	amend = commit --amend
-	a     = commit --amend
-	aa = commit --amend -a --no-edit
-	dic = diff --cached
-	oneline = log --pretty=oneline --abbrev-commit --graph --decorate
-	ol      = log --pretty=oneline --abbrev-commit --graph --decorate
-	br = branch
-	di = diff
-	sh = show
-	rb = rebase
-	rbi = rebase -i
-	rbc = rebase --continue
-	rba = rebase --abort
-	fx = !sh -c 'git commit -m \"This fixes commit $(git rev-parse $1).\" --fixup \"$@\"' -
-	wip = commit -am WIP --no-verify
-	cp = cherry-pick
-	p = push
-	pl = pull
-	plr = pull --rebase
+  a = amend
+  aa = commit --amend -a --no-edit
+  amend = commit --amend
+  br = branch
+  ci = commit
+  co = checkout
+  cp = cherry-pick
+  di = diff
+  dic = diff --cached
+  fx = !sh -c 'git commit -m \"This fixes commit $(git rev-parse $1).\" --fixup \"$@\"' -
+  ol = oneline
+  oneline = log --pretty=oneline --abbrev-commit --graph --decorate
+  p = push
+  pl = pull
+  plr = pull --rebase
+  rb = rebase
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase -i
+  sh = show
+  st = status
+  undo = reset --soft HEAD^
+  unstage = reset HEAD
+  who = shortlog -sne
+  wip = commit -am WIP --no-verify
