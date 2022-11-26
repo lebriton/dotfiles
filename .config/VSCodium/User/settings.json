@@ -42,4 +42,6 @@
     }
 ],
 "workbench.iconTheme": "vscode-great-icons",
+"editor.renderFinalNewline": false,
+"files.insertFinalNewline": true,
 }
