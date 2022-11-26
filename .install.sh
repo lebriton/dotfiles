@@ -10,7 +10,6 @@ fi
 sudo apt-get update
 sudo apt-get install -y \
   curl \
-  emacs \
   fzf \
   git \
   python3 \
@@ -26,7 +25,6 @@ sudo apt-get install -y \
   btop \
   cbatticon \
   compton \
-  cron \
   dunst \
   flameshot \
   fonts-dejavu \
@@ -44,8 +42,6 @@ sudo apt-get install -y \
   yad \
   yaru-theme-icon
 
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-
 mkdir -p ~/workspace/{bin,projects}
 
 sudo apt-get install -y dh-autoreconf
@@ -61,3 +57,8 @@ fi
 
 # "Install" font
 fc-cache
+
+sudo snap install codium --classic
+codium --install-extension jdinhlife.gruvbox --force
+codium --install-extension MS-CEINTL.vscode-language-pack-fr --force
+codium --install-extension vscodevim.vim --force

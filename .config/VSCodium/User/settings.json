@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "ubuntu Mono",
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "trailing",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "editor.fontSize": 16
+}
