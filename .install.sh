@@ -59,7 +59,12 @@ fi
 fc-cache
 
 sudo snap install codium --classic
-codium --install-extension jdinhlife.gruvbox --force
-codium --install-extension MS-CEINTL.vscode-language-pack-fr --force
-codium --install-extension shardulm94.trailing-spaces --force
-codium --install-extension vscodevim.vim --force
+# codium --list-extensions
+echo "
+BeardedBear.beardedicons
+jdinhlife.gruvbox
+MS-CEINTL.vscode-language-pack-fr
+ms-python.python
+shardulm94.trailing-spaces
+vscodevim.vim
+" | xargs -L 1 codium --force --install-extension
