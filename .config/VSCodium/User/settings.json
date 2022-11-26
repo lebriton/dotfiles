@@ -30,6 +30,9 @@
         "before": ["<leader>", "w"],
         "after": ["<C-w>"]
     }, {
+        "before": ["g", "r"],
+        "commands": ["editor.action.referenceSearch.trigger"]
+    }, {
         "before": ["K"],
         "commands": ["editor.action.showHover"]
     }],
