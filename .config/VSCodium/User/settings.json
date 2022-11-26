@@ -1,7 +1,14 @@
 {
     "editor.fontFamily": "ubuntu Mono",
     "editor.tabSize": 2,
-    "editor.renderWhitespace": "trailing",
     "workbench.colorTheme": "Gruvbox Dark Medium",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "editor.renderWhitespace": "none",
+    "editor.cursorStyle": "underline",
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.highlightedyank.enable": true,
+    "vim.hlsearch": true,
+    "vim.joinspaces": false,
+    "vim.leader": "space",
+    "vim.smartRelativeLine": true
 }

@@ -61,4 +61,5 @@ fc-cache
 sudo snap install codium --classic
 codium --install-extension jdinhlife.gruvbox --force
 codium --install-extension MS-CEINTL.vscode-language-pack-fr --force
+codium --install-extension shardulm94.trailing-spaces --force
 codium --install-extension vscodevim.vim --force
