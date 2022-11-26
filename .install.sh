@@ -61,7 +61,7 @@ fc-cache
 sudo snap install codium --classic
 # codium --list-extensions
 echo "
-BeardedBear.beardedicons
+emmanuelbeziat.vscode-great-icons
 jdinhlife.gruvbox
 MS-CEINTL.vscode-language-pack-fr
 ms-python.python

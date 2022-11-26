@@ -39,5 +39,7 @@
     }, {
         "before": ["<"],
         "commands": ["editor.action.outdentLines"]
-    }],
+    }
+],
+"workbench.iconTheme": "vscode-great-icons",
 }
