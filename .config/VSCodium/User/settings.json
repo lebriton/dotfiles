@@ -18,6 +18,12 @@
         "before": ["<leader>", "b", "p"],
         "commands": ["workbench.action.previousEditorInGroup"]
     }, {
+        "before": ["<leader>", "g", "b"],
+        "commands": ["gitlens.toggleFileBlame"]
+    }, {
+        "before": ["<leader>", "g", "g"],
+        "commands": ["gitlens.showGraphPage"]
+    }, {
         "before": ["<leader>", "p", "f"],
         "commands": ["workbench.action.quickOpen"]
     }, {
@@ -46,4 +52,28 @@
     "workbench.iconTheme": "vscode-great-icons",
     "editor.renderFinalNewline": false,
     "files.insertFinalNewline": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.rebaseEditor.ordering": "asc",
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "gitlens.rebase"
+    },
+    "gitlens.blame.format": "${message|25?} ${agoOrDate|14-}",
+    "gitlens.blame.heatmap.enabled": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.highlight.enabled": false,
+    "gitlens.blame.compact": false,
+    "gitlens.hovers.avatars": false,
+    "gitlens.views.commits.avatars": false,
+    "gitlens.views.commitDetails.avatars": false,
+    "gitlens.views.repositories.avatars": false,
+    "gitlens.views.fileHistory.avatars": false,
+    "gitlens.views.lineHistory.avatars": false,
+    "gitlens.views.branches.avatars": false,
+    "gitlens.views.remotes.avatars": false,
+    "gitlens.views.tags.avatars": false,
+    "gitlens.views.worktrees.avatars": false,
+    "gitlens.views.contributors.avatars": false,
+    "gitlens.views.searchAndCompare.avatars": false,
+    "gitlens.graph.avatars": false,
 }

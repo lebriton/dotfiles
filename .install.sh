@@ -61,6 +61,7 @@ fc-cache
 sudo snap install codium --classic
 # codium --list-extensions
 echo "
+eamodio.gitlens
 emmanuelbeziat.vscode-great-icons
 jdinhlife.gruvbox
 MS-CEINTL.vscode-language-pack-fr
