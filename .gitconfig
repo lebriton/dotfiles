@@ -25,6 +25,7 @@
   rbi = rebase -i
   sh = show
   st = status
+  sw = !git checkout $(git branch -a --format '%(refname:short)' | sed 's~origin~~' | sort | uniq | fzf)
   undo = reset --soft HEAD^
   unstage = reset HEAD
   who = shortlog -sne
