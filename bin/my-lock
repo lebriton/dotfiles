@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-img_path=$(mktemp /tmp/XXXXXXXXXX.png)
-import -window root $img_path
-#convert $img_path -scale 10% -scale 1000% $img_path
-convert $img_path -blur 0x8 $img_path
-i3lock --no-unlock-indicator --image $img_path

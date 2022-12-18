@@ -19,31 +19,11 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans 14
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id $HOME/.config/i3/autostart.sh
-
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3blocks_volume pkill -SIGRTMIN+1 i3blocks
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && $refresh_i3blocks_volume
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && $refresh_i3blocks_volume
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && $refresh_i3blocks_volume
-
-# Use xbacklight to adjust screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec urxvt
-
 # kill focused window
 bindsym $mod+Shift+A kill
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec $HOME/.config/rofi/scripts/launcher_t3
 
 # change focus
 bindsym $mod+h focus left
@@ -127,11 +107,6 @@ bindsym $mod+Shift+p move container to workspace $ws10; workspace $ws10
 
 workspace_layout tabbed
 
-# control the system
-bindsym $mod+s exec $HOME/.config/rofi/scripts/powermenu_t3
-
-bindsym --release --border button2 kill
-
 focus_follows_mouse no
 
 # resize window (you can also use the mouse for that)
@@ -154,16 +129,6 @@ mode "resize" {
 
 bindsym $mod+Control+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        strip_workspace_numbers yes
-        status_command i3blocks
-}
-
-# https://github.com/vivien/i3blocks-contrib/tree/master/calendar
-for_window [class="Yad"] floating enable
-
 # NB: use xprop to get the class
 #assign [class="firefox"] $ws1
 assign [class="VSCodium"] $ws1
@@ -171,3 +136,5 @@ assign [class="obsidian"] $ws2
 assign [class="Protonvpn"] $ws7
 assign [class="thunderbird"] $ws8
 assign [class="discord"] $ws9
+
+exec --no-startup-id $HOME/.config/i3/autostart.sh

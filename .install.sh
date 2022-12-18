@@ -19,44 +19,15 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
-  alsa-tools \
-  arandr \
-  blueman \
-  btop \
-  cbatticon \
   compton \
-  dunst \
   flameshot \
-  fonts-dejavu \
-  gpaste \
   i3 \
-  imagemagick \
-  pulseaudio-utils \
-  pavucontrol \
-  rofi \
   rxvt-unicode \
-  tint2 \
   xbacklight \
-  xdotool \
-  xss-lock \
-  yad \
-  yaru-theme-icon
+  xfce4 \
+  xfce4-goodies \
 
 mkdir -p ~/workspace/{bin,projects}
-
-sudo apt-get install -y dh-autoreconf
-if [[ ! -d "$HOME/workspace/projects/i3blocks" ]]; then
-  cd ~/workspace/projects
-  git clone https://github.com/vivien/i3blocks
-  cd i3blocks
-  ./autogen.sh
-  ./configure
-  make
-  sudo make install
-fi
-
-# "Install" font
-fc-cache
 
 sudo snap install codium --classic
 # codium --list-extensions
