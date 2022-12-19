@@ -26,6 +26,9 @@ sudo apt-get install -y \
   xbacklight \
   xfce4 \
   xfce4-goodies \
+  yaru-theme-gtk \
+  yaru-theme-icon \
+  yaru-theme-sound \
 
 mkdir -p ~/workspace/{bin,projects}
 
