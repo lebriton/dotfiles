@@ -55,7 +55,7 @@
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance3439"/>
+      <property name="mpris-players" type="string" value="firefox.instance3439;firefox.instance5269"/>
     </property>
     <property name="plugin-9" type="string" value="power-manager-plugin"/>
     <property name="plugin-10" type="string" value="notification-plugin"/>
@@ -71,9 +71,9 @@
     </property>
     <property name="plugin-3" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="16714754657.desktop"/>
-        <value type="string" value="16714750792.desktop"/>
-        <value type="string" value="16714753173.desktop"/>
+        <value type="string" value="16714808291.desktop"/>
+        <value type="string" value="16714808352.desktop"/>
+        <value type="string" value="16714808423.desktop"/>
       </property>
       <property name="disable-tooltips" type="bool" value="false"/>
       <property name="show-label" type="bool" value="false"/>
