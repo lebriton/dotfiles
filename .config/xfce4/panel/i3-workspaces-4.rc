@@ -7,5 +7,5 @@ visible_color=rgb(0,0,0)
 css=.workspace {\n  min-width: 24px;\n  background-color: #222222;\n  border: 1px solid #333333;\n  font-size: 24px;\n  color: #888888;\n}\n.workspace.visible {\n  background: #5f676a;\n  color: #ffffff;\n}\n.workspace.focused {\n  background-color: #285577;\n  border-color: #4c7899;\n}\n.workspace.urgent {\n  background-color: #900000;\n  border-color: #2f343a;\n  color: #ffffff;\n}\n.binding-mode {\n}\n
 strip_workspace_numbers=true
 auto_detect_outputs=true
-output=
+output=HDMI2
 
