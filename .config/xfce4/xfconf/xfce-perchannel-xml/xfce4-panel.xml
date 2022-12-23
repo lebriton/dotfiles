@@ -44,11 +44,20 @@
     </property>
     <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=8;x=2880;y=1055"/>
-      <property name="size" type="uint" value="48"/>
+      <property name="size" type="uint" value="32"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="span-monitors" type="bool" value="false"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
+      </property>
+      <property name="length" type="uint" value="100"/>
+      <property name="icon-size" type="uint" value="24"/>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.000000"/>
+        <value type="double" value="0.000000"/>
+        <value type="double" value="0.000000"/>
+        <value type="double" value="1.000000"/>
       </property>
     </property>
   </property>
