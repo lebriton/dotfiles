@@ -6,12 +6,13 @@
     <value type="int" value="1"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=10;x=0;y=0"/>
+      <property name="position" type="string" value="p=8;x=960;y=1066"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="16"/>
-      <property name="size" type="uint" value="26"/>
+      <property name="size" type="uint" value="32"/>
       <property name="plugin-ids" type="array">
+        <value type="int" value="4"/>
         <value type="int" value="24"/>
         <value type="int" value="12"/>
         <value type="int" value="9"/>
@@ -32,6 +33,9 @@
         <value type="double" value="1.000000"/>
       </property>
       <property name="length-adjust" type="bool" value="true"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
+      <property name="output-name" type="string" value="Automatic"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -67,5 +71,6 @@
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="true"/>
     </property>
+    <property name="plugin-4" type="string" value="i3-workspaces"/>
   </property>
 </channel>
