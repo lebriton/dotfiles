@@ -19,17 +19,9 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
-  blueman \
-  compton \
   flameshot \
-  i3 \
+  kde-plasma-desktop \
   rxvt-unicode \
-  xbacklight \
-  xfce4 \
-  xfce4-goodies \
-  yaru-theme-gtk \
-  yaru-theme-icon \
-  yaru-theme-sound \
 
 mkdir -p ~/workspace/{bin,projects}
 
@@ -44,29 +36,3 @@ ms-python.python
 shardulm94.trailing-spaces
 vscodevim.vim
 " | xargs -L 1 codium --force --install-extension
-
-sudo apt-get install -y \
-  autotools-dev \
-  gcc \
-  gobject-introspection \
-  gtk-doc-tools \
-  libjson-glib-dev \
-  libglib2.0-dev \
-  libxcb1-dev \
-  libxfce4panel-2.0-dev \
-  libxfce4ui-2-dev \
-  pkg-config \
-  xcb-proto \
-  xfce4-dev-tools
-cd ~/workspace/projects
-git clone https://github.com/altdesktop/i3ipc-glib.git
-cd i3ipc-glib
-./autogen.sh --prefix=/usr
-make
-sudo make install
-cd ~/workspace/projects
-git clone https://github.com/denesb/xfce4-i3-workspaces-plugin.git
-cd xfce4-i3-workspaces-plugin
-./autogen.sh --prefix=/usr
-make
-sudo make install
