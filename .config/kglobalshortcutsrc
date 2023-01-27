@@ -66,10 +66,10 @@ Switch One Desktop Down=none,Meta+Ctrl+Down,Passer au bureau du dessous
 Switch One Desktop Up=none,Meta+Ctrl+Up,Passer au bureau du dessus
 Switch One Desktop to the Left=none,Meta+Ctrl+Left,Passer au bureau de gauche
 Switch One Desktop to the Right=none,Meta+Ctrl+Right,Passer au bureau de droite
-Switch Window Down=Meta+J,Meta+Alt+Down,Basculer vers une fenêtre en-dessous
-Switch Window Left=Meta+H,Meta+Alt+Left,Basculer vers une fenêtre à gauche
+Switch Window Down=none,Meta+Alt+Down,Basculer vers une fenêtre en-dessous
+Switch Window Left=none,Meta+Alt+Left,Basculer vers une fenêtre à gauche
 Switch Window Right=none,Meta+Alt+Right,Basculer vers une fenêtre à droite
-Switch Window Up=Meta+K,Meta+Alt+Up,Basculer vers une fenêtre au-dessus
+Switch Window Up=none,Meta+Alt+Up,Basculer vers une fenêtre au-dessus
 Switch to Desktop 1=Meta+Q,Ctrl+F1,Passer au bureau 1
 Switch to Desktop 10=Meta+P,,Passer au bureau 10
 Switch to Desktop 11=none,,Passer au bureau 11
@@ -140,12 +140,12 @@ Window Pack Down=Meta+Shift+J,,Déplacer une fenêtre vers le bas
 Window Pack Left=Meta+Shift+H,,Déplacer une fenêtre vers la gauche
 Window Pack Right=Meta+Shift+L,,Déplacer une fenêtre vers la droite
 Window Pack Up=Meta+Shift+K,,Déplacer une fenêtre vers le haut
-Window Quick Tile Bottom=Meta+Down,Meta+Down,Mettre rapidement en mosaïque une fenêtre en bas
+Window Quick Tile Bottom=Meta+J,Meta+Down,Mettre rapidement en mosaïque une fenêtre en bas
 Window Quick Tile Bottom Left=none,,Mettre rapidement en mosaïque une fenêtre en bas et à gauche
 Window Quick Tile Bottom Right=none,,Mettre rapidement en mosaïque une fenêtre en bas et à droite
-Window Quick Tile Left=Meta+Left,Meta+Left,Mettre rapidement en mosaïque une fenêtre à gauche
-Window Quick Tile Right=Meta+Right,Meta+Right,Mettre rapidement en mosaïque une fenêtre à droite
-Window Quick Tile Top=Meta+Up,Meta+Up,Mettre rapidement en mosaïque une fenêtre en haut
+Window Quick Tile Left=Meta+H,Meta+Left,Mettre rapidement en mosaïque une fenêtre à gauche
+Window Quick Tile Right=Meta+L,Meta+Right,Mettre rapidement en mosaïque une fenêtre à droite
+Window Quick Tile Top=Meta+K,Meta+Up,Mettre rapidement en mosaïque une fenêtre en haut
 Window Quick Tile Top Left=none,,Mettre rapidement en mosaïque une fenêtre en haut et à gauche
 Window Quick Tile Top Right=none,,Mettre rapidement en mosaïque une fenêtre en haut et à droite
 Window Raise=none,,Dérouler une fenêtre
@@ -197,11 +197,7 @@ _launch=Meta+Shift+Return,Meta+E,Dolphin
 [org.kde.krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Exécuter la commande en utilisant le contenu du presse-papier
 _k_friendly_name=KRunner
-_launch=Search\tMeta+D\tAlt+F2\tAlt+Space,Alt+Space\tAlt+F2\tSearch,KRunner
-
-[org.kde.plasma.emojier.desktop]
-_k_friendly_name=Sélecteur d'émoticônes
-_launch=Meta+.,Meta+.,Sélecteur d'émoticônes
+_launch=Meta+D\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Diminuer la luminosité du clavier
@@ -246,12 +242,3 @@ stop current activity=Meta+S,Meta+S,Arrêter l'activité actuelle
 switch to next activity=none,,Basculer vers l'activité suivante
 switch to previous activity=none,,Basculer vers l'activité précédente
 toggle do not disturb=none,,Basculer « Ne pas déranger »
-
-[systemsettings.desktop]
-_k_friendly_name=Configuration du système
-_launch=Tools,Tools,Configuration du système
-kcm-kscreen=none,none,Configuration des affichages
-kcm-lookandfeel=none,none,Thème global
-kcm-users=none,none,Utilisateurs
-powerdevilprofilesconfig=none,none,Économie d'énergie
-screenlocker=none,none,Verrouillage d'écran
