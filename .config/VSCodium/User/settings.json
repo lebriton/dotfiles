@@ -76,4 +76,6 @@
     "gitlens.views.contributors.avatars": false,
     "gitlens.views.searchAndCompare.avatars": false,
     "gitlens.graph.avatars": false,
+    "markdown.marp.enableHtml": true,
+    "markdown.marp.chromePath": "/snap/chromium/current/usr/lib/chromium-browser/chrome",
 }
