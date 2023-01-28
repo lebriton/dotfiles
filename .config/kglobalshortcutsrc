@@ -192,11 +192,11 @@ view_zoom_out=Meta+-,Meta+-,Zoom arrière
 
 [mediacontrol]
 _k_friendly_name=Contrôleur de média
-mediavolumedown=,,Diminuer le volume du média
-mediavolumeup=,,Augmenter le volume du média
+mediavolumedown=none,none,Diminuer le volume du média
+mediavolumeup=none,none,Augmenter le volume du média
 nextmedia=Media Next,Media Next,Média suivant
 pausemedia=Media Pause,Media Pause,Mettre en pause la lecture du média
-playmedia=,,Lancer la lecture du média
+playmedia=none,none,Lancer la lecture du média
 playpausemedia=Media Play,Media Play,Lancer / Mettre en pause la lecture
 previousmedia=Media Previous,Media Previous,Média précédent
 stopmedia=Media Stop,Media Stop,Arrêter la lecture
