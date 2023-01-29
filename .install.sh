@@ -19,6 +19,7 @@ sudo apt-get install -y \
   wget \
 
 sudo apt-get install -y \
+  ark \
   flameshot \
   kde-plasma-desktop \
   rxvt-unicode \
