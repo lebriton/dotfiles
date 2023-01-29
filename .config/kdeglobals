@@ -141,6 +141,9 @@ ColorSchemeHash=0d37ac7d257c7643ff5540889d5368b99875ad6b
 TerminalApplication=urxvt
 TerminalService=rxvt-unicode.desktop
 
+[KDE]
+SingleClick=false
+
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
