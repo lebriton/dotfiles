@@ -50,7 +50,7 @@
         "commands": ["editor.action.outdentLines"]
     }],
     "workbench.iconTheme": "vscode-great-icons",
-    "editor.renderFinalNewline": false,
+    "editor.renderFinalNewline": "off",
     "files.insertFinalNewline": true,
     "gitlens.codeLens.enabled": false,
     "gitlens.statusBar.enabled": false,
