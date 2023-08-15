@@ -13,6 +13,7 @@
   cp = cherry-pick
   di = diff
   dic = diff --cached
+  fa = fetch --all
   fx = !sh -c 'git commit -m \"This fixes commit $(git rev-parse $1).\" --fixup \"$@\"' -
   ol = oneline
   oneline = log --pretty=oneline --abbrev-commit --graph --decorate

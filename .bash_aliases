@@ -19,6 +19,11 @@ bak() {
   cp -r "$1" "$1.bak"
 }
 
+mkcd () {
+  mkdir "$1" && cd "$1"
+}
+
+alias c='codium'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias d='docker'
