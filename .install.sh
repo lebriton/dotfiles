@@ -1,39 +1,33 @@
 #!/usr/bin/env bash
 
-if [[ ! -d "$HOME/.dotfiles" ]]; then
-  git clone --bare git@gitlab.com:bminusl/dotfiles.git $HOME/.dotfiles
-  # or git clone --bare https://gitlab.com/bminusl/dotfiles.git $HOME/.dotfiles
-  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout main -f
-  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+set -Eeuo pipefail
+
+git_dir="$HOME/.dotfiles"
+work_tree="$HOME"
+
+if [[ -d "$git_dir" ]]; then
+  echo -e "Folder $git_dir already exists.\nAborted"
+  exit 1
 fi
 
-sudo apt-get update
-sudo apt-get install -y \
-  curl \
-  fzf \
-  git \
-  python3 \
-  python3-pip \
-  tmux \
-  vim \
-  wget \
+PS3='Protocol to use to clone the repository: '
+options=("ssh" "https")
+select opt in "${options[@]}"
+do
+  case $opt in
+    "ssh")
+      (set -x; git clone --bare git@gitlab.com:lebriton/dotfiles.git "$git_dir")
+      break
+      ;;
+    "https")
+      (set -x; git clone --bare https://gitlab.com/lebriton/dotfiles.git "$git_dir")
+      break
+      ;;
+    *) echo "Invalid option $REPLY";;
+  esac
+done
 
-sudo apt-get install -y \
-  ark \
-  flameshot \
-  kde-plasma-desktop \
-  rxvt-unicode \
+set -x
 
-mkdir -p ~/workspace/{bin,projects}
-
-sudo snap install codium --classic
-# codium --list-extensions
-echo "
-eamodio.gitlens
-emmanuelbeziat.vscode-great-icons
-jdinhlife.gruvbox
-MS-CEINTL.vscode-language-pack-fr
-ms-python.python
-shardulm94.trailing-spaces
-vscodevim.vim
-" | xargs -L 1 codium --force --install-extension
+git --git-dir="$git_dir" --work-tree="$work_tree" checkout main -f
+git --git-dir="$git_dir" --work-tree="$work_tree" config --local status.showUntrackedFiles no
