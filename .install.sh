@@ -2,6 +2,8 @@
 
 set -Eeuo pipefail
 
+protocol="$1"
+
 git_dir="$HOME/.dotfiles"
 work_tree="$HOME"
 
@@ -10,22 +12,19 @@ if [[ -d "$git_dir" ]]; then
   exit 1
 fi
 
-PS3='Protocol to use to clone the repository: '
-options=("ssh" "https")
-select opt in "${options[@]}"
-do
-  case $opt in
-    "ssh")
-      (set -x; git clone --bare git@gitlab.com:lebriton/dotfiles.git "$git_dir")
-      break
-      ;;
-    "https")
-      (set -x; git clone --bare https://gitlab.com/lebriton/dotfiles.git "$git_dir")
-      break
-      ;;
-    *) echo "Invalid option $REPLY";;
-  esac
-done
+case "$protocol" in
+  "ssh")
+    (set -x; git clone --bare git@gitlab.com:lebriton/dotfiles.git "$git_dir")
+    break
+    ;;
+  "https")
+    (set -x; git clone --bare https://gitlab.com/lebriton/dotfiles.git "$git_dir")
+    break
+    ;;
+  *)
+    echo -e "Unknown protocol '$protocol'\nAborted"
+    exit 1
+esac
 
 set -x
 
