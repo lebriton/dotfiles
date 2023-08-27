@@ -14,6 +14,8 @@ selected="$root_dir/$selected_name"
 selected_name=$(echo "$selected_name" | tr _ .)
 tmux_running=$(pgrep tmux)
 
+set -x
+
 if [[ -z "$TMUX" ]] && [[ -z "$tmux_running" ]]; then
     tmux new-session -s "$selected_name" -c "$selected"
     exit 0
