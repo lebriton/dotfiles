@@ -31,3 +31,4 @@
   unstage = reset HEAD
   who = shortlog -sne
   wip = commit -am WIP --no-verify
+  yolo = push --force
