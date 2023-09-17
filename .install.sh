@@ -14,11 +14,11 @@ fi
 
 case "$protocol" in
   "ssh")
-    (set -x; git clone --bare git@gitlab.com:lebriton/dotfiles.git "$git_dir")
+    (set -x; git clone --bare git@github.com:lebriton/dotfiles.git "$git_dir")
     break
     ;;
   "https")
-    (set -x; git clone --bare https://gitlab.com/lebriton/dotfiles.git "$git_dir")
+    (set -x; git clone --bare https://github.com/lebriton/dotfiles.git "$git_dir")
     break
     ;;
   *)
