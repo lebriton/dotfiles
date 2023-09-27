@@ -9,6 +9,26 @@ esac
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.bash_bindings ] && source ~/.bash_bindings
 
+
+
+
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set the bash prompt
+prompt_command() {
+  PROMPT_DIRTRIM=0
+  PS1='\[\033[01;33m\]$(__git_ps1 "(%s) ")${debian_chroot:+($debian_chroot)}\[\033[m\]\[\033[01m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+}
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PROMPT_COMMAND=prompt_command
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -20,18 +40,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-shopt -s dotglob # Enable globbing for hidden files
-stty -ixon # Disable ctrl-s and ctrl-q
+# enable globbing for hidden files
+shopt -s dotglob
 
+# Disable ctrl-s and ctrl-q
+stty -ixon
+
+# set the default text editor
 export EDITOR=vim
-
-prompt_command() {
-  PROMPT_DIRTRIM=0
-  blue="\[\e[1;34m\]"
-  gray="\[\e[0;37m\]"
-  reset="\[\e[m\]"
-  bold="\[\e[01m\]"
-  export PS1="${reset}${gray}$(__git_ps1 '(%s) ')${reset}${bold}\u@\h${reset}:${blue}\w${reset}\$ "
-}
-export GIT_PS1_SHOWDIRTYSTATE=1
-export PROMPT_COMMAND=prompt_command
