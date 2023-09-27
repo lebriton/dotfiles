@@ -8,7 +8,6 @@ esac
 [ -f ~/.bash_git ] && source ~/.bash_git
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.bash_bindings ] && source ~/.bash_bindings
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -25,11 +24,6 @@ shopt -s dotglob # Enable globbing for hidden files
 stty -ixon # Disable ctrl-s and ctrl-q
 
 export EDITOR=vim
-
-# TODO: do not add duplicates
-export PATH=~/.local/bin:$PATH
-export PATH=~/bin:$PATH
-export PATH=~/.cargo/bin:$PATH # rust
 
 prompt_command() {
   PROMPT_DIRTRIM=0
