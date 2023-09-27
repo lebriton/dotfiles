@@ -1,8 +1,7 @@
 {
-    "editor.fontFamily": "ubuntu Mono",
+    "editor.fontFamily": "Ubuntu Mono",
     "editor.tabSize": 2,
     "workbench.colorTheme": "Gruvbox Dark Medium",
-    "editor.fontSize": 16,
     "editor.renderWhitespace": "none",
     "editor.cursorStyle": "underline",
     "vim.changeWordIncludesWhitespace": true,
@@ -78,4 +77,5 @@
     "gitlens.graph.avatars": false,
     "markdown.marp.enableHtml": true,
     "markdown.marp.chromePath": "/snap/chromium/current/usr/lib/chromium-browser/chrome",
+    "editor.fontSize": 16,
 }

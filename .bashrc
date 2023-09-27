@@ -5,6 +5,7 @@ case $- in
 esac
 
 [ -f ~/.sensible.bash ] && source ~/.sensible.bash
+[ -f ~/.bash_git ] && source ~/.bash_git
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.bash_bindings ] && source ~/.bash_bindings
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -29,10 +30,6 @@ export EDITOR=vim
 export PATH=~/.local/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=~/.cargo/bin:$PATH # rust
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 prompt_command() {
   PROMPT_DIRTRIM=0
