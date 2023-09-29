@@ -9,10 +9,6 @@ esac
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
 [ -f ~/.bash_bindings ] && source ~/.bash_bindings
 
-
-
-
-
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -48,3 +44,8 @@ stty -ixon
 
 # set the default text editor
 export EDITOR=vim
+
+# ===
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

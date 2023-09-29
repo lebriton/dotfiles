@@ -1,81 +1,50 @@
 {
-    "editor.fontFamily": "Ubuntu Mono",
-    "editor.tabSize": 2,
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "editor.renderWhitespace": "none",
-    "editor.cursorStyle": "underline",
-    "vim.changeWordIncludesWhitespace": true,
-    "vim.highlightedyank.enable": true,
-    "vim.hlsearch": true,
-    "vim.joinspaces": false,
-    "vim.leader": "space",
-    "vim.smartRelativeLine": true,
-    "vim.normalModeKeyBindingsNonRecursive": [{
-        "before": ["<leader>", "b", "n"],
-        "commands": ["workbench.action.nextEditorInGroup"]
-    }, {
-        "before": ["<leader>", "b", "p"],
-        "commands": ["workbench.action.previousEditorInGroup"]
-    }, {
-        "before": ["<leader>", "g", "b"],
-        "commands": ["gitlens.toggleFileBlame"]
-    }, {
-        "before": ["<leader>", "g", "g"],
-        "commands": ["gitlens.showGraphPage"]
-    }, {
-        "before": ["<leader>", "p", "f"],
-        "commands": ["workbench.action.quickOpen"]
-    }, {
-        "before": ["<leader>", "p", "t"],
-        "commands": ["workbench.action.toggleSidebarVisibility"]
-    }, {
-        "before": ["<leader>", "s", "r"],
-        "commands": ["editor.action.rename"]
-    }, {
-        "before": ["<leader>", "w"],
-        "after": ["<C-w>"]
-    }, {
-        "before": ["g", "r"],
-        "commands": ["editor.action.referenceSearch.trigger"]
-    }, {
-        "before": ["K"],
-        "commands": ["editor.action.showHover"]
-    }],
-    "vim.visualModeKeyBindings": [ {
-        "before": [">"],
-        "commands": ["editor.action.indentLines"]
-    }, {
-        "before": ["<"],
-        "commands": ["editor.action.outdentLines"]
-    }],
-    "workbench.iconTheme": "vscode-great-icons",
-    "editor.renderFinalNewline": "off",
-    "files.insertFinalNewline": true,
-    "gitlens.codeLens.enabled": false,
-    "gitlens.statusBar.enabled": false,
-    "gitlens.rebaseEditor.ordering": "asc",
-    "workbench.editorAssociations": {
-        "git-rebase-todo": "gitlens.rebase"
-    },
-    "gitlens.blame.format": "${message|25?} ${agoOrDate|14-}",
-    "gitlens.blame.heatmap.enabled": false,
-    "gitlens.blame.avatars": false,
-    "gitlens.blame.highlight.enabled": false,
-    "gitlens.blame.compact": false,
-    "gitlens.hovers.avatars": false,
-    "gitlens.views.commits.avatars": false,
-    "gitlens.views.commitDetails.avatars": false,
-    "gitlens.views.repositories.avatars": false,
-    "gitlens.views.fileHistory.avatars": false,
-    "gitlens.views.lineHistory.avatars": false,
-    "gitlens.views.branches.avatars": false,
-    "gitlens.views.remotes.avatars": false,
-    "gitlens.views.tags.avatars": false,
-    "gitlens.views.worktrees.avatars": false,
-    "gitlens.views.contributors.avatars": false,
-    "gitlens.views.searchAndCompare.avatars": false,
-    "gitlens.graph.avatars": false,
-    "markdown.marp.enableHtml": true,
-    "markdown.marp.chromePath": "/snap/chromium/current/usr/lib/chromium-browser/chrome",
-    "editor.fontSize": 16,
+    // Vim easymotion is required for Jump menu - <SPC> j
+    "vim.easymotion": true,
+    // Use system clipboard for vim
+    "vim.useSystemClipboard": true,
+    // Trigger the main which key menu with in the active editor with vim
+    // This cannot be put into keybindings.json because it will
+    // create conflict with Vim.
+    // https://github.com/stevenguh/spacecode/issues/3
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        },
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ]
 }
