@@ -46,5 +46,12 @@
             "before": ["<"],
             "commands": ["editor.action.outdentLines"]
         }
-    ]
+    ],
+    "editor.fontFamily": "Ubuntu Mono",
+    "editor.fontSize": 16,
+    "editor.cursorStyle": "block",
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.iconTheme": "vscode-great-icons",
+    "files.insertFinalNewline": true,
+    "editor.renderFinalNewline": "off"
 }
