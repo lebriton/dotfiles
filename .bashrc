@@ -43,7 +43,7 @@ shopt -s dotglob
 stty -ixon
 
 # set the default text editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # ===
 
