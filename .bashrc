@@ -19,8 +19,14 @@ fi
 
 # set the bash prompt
 prompt_command() {
+  exit_code="$?"
   PROMPT_DIRTRIM=0
-  PS1='\[\033[01;33m\]$(__git_ps1 "(%s) ")${debian_chroot:+($debian_chroot)}\[\033[m\]\[\033[01m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  if [[ "$exit_code" -eq 0 ]]; then
+    PS1="\[\033[32m\] "
+  else
+    PS1="\[\033[31m\] "
+  fi
+  PS1+='\[\033[01;33m\]$(__git_ps1 "(%s) ")${debian_chroot:+($debian_chroot)}\[\033[m\]\[\033[01m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 }
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PROMPT_COMMAND=prompt_command
