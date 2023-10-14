@@ -4,6 +4,8 @@ require("remap")
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 
+vim.cmd('highlight SignColumn guibg=none')
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
