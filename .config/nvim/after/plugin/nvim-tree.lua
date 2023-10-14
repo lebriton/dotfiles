@@ -18,6 +18,7 @@ require("nvim-tree").setup({
     renderer = {
         group_empty = true,
         highlight_opened_files = 'all',
+        special_files = {},
     },
     filters = {
         dotfiles = true,
