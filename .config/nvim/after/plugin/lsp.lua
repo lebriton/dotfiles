@@ -13,13 +13,47 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {'pyright'},
+    ensure_installed = {
+        'ansiblels',
+        'bashls',
+        'cssls',
+        'dockerls',
+        'docker_compose_language_service',
+        'html',
+        'jsonls',
+        'tsserver',  -- js
+        'marksman',  -- markdown
+        'intelephense',  -- php
+        'pyright',  -- python
+        'sqlls',
+        'taplo',  -- toml
+        'tailwindcss',
+        'lemminx',  -- xml
+        'yamlls',
+
+    },
     handlers = {
         lsp_zero.default_setrp,
     },
 })
-
-lsp_zero.setup_servers({'pyright'})
+lsp_zero.setup_servers({
+        'ansiblels',
+        'bashls',
+        'cssls',
+        'dockerls',
+        'docker_compose_language_service',
+        'html',
+        'jsonls',
+        'tsserver',  -- js
+        'marksman',  -- markdown
+        'intelephense',  -- php
+        'pyright',  -- python
+        'sqlls',
+        'taplo',  -- toml
+        'tailwindcss',
+        'lemminx',  -- xml
+        'yamlls',
+})
 
 
 local cmp = require('cmp')
