@@ -95,4 +95,5 @@ return require('packer').startup(function(use)
     use('RRethy/vim-illuminate')
     use('ntpeters/vim-better-whitespace')
     use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+    use('ygm2/rooter.nvim')
 end)
