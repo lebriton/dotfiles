@@ -93,4 +93,5 @@ return require('packer').startup(function(use)
     }
 
     use('RRethy/vim-illuminate')
+    use('ntpeters/vim-better-whitespace')
 end)
