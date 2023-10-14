@@ -2,7 +2,7 @@
   email = hello@brytonlacquement.com
   name = Bryton Lacquement
 [core]
-  editor = vim
+  editor = nvim
 [alias]
   a = amend
   aa = commit --amend -a --no-edit
