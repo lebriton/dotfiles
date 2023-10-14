@@ -53,7 +53,8 @@ URxvt*scrollTtyKeypress: true
 URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 
-URxvt.font: xft:Ubuntu Mono:size=11
+! URxvt.font: xft:Ubuntu Mono:size=11
+URxvt.font: xft:UbuntuMono Nerd Font Mono:size=11
 URxvt.scrollBar: false
 
 ! https://stackoverflow.com/questions/39884093/rebinding-copy-paste-in-urxvt
