@@ -9,7 +9,6 @@ vim.keymap.set("n", "gd", builtin.lsp_definitions, opts)
 vim.keymap.set("n", "gr", builtin.lsp_references, opts)
 vim.keymap.set("n", "<leader>ss", builtin.lsp_document_symbols, opts)
 vim.keymap.set("n", "<leader>sw", builtin.lsp_workspace_symbols, opts)
-vim.keymap.set("n", "<leader>sl", builtin.treesitter, opts)
 
 vim.keymap.set('n', '<leader>c', builtin.command_history, {})
 
