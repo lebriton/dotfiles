@@ -42,3 +42,5 @@ require('lualine').setup {
     inactive_winbar = {},
     extensions = {'nvim-tree'}
 }
+
+vim.cmd'set laststatus=3'

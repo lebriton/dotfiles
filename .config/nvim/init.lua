@@ -40,5 +40,3 @@ vim.opt.colorcolumn = "80"
 
 vim.cmd'set autoread'
 vim.cmd'au CursorHold * checktime'
-
-vim.cmd'set laststatus=3'
