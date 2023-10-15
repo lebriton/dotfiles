@@ -19,6 +19,9 @@ require("nvim-tree").setup({
         group_empty = true,
         highlight_opened_files = 'all',
         special_files = {},
+        root_folder_label = function(path)
+            return vim.fn.fnamemodify(path, ":t")
+        end,
     },
     filters = {
         dotfiles = true,

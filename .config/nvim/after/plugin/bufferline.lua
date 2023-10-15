@@ -11,5 +11,14 @@ bufferline.setup({
             delay = 200,
             reveal = {'close'}
         },
+        offsets = {
+            {
+                filetype = "NvimTree",
+                text = 'Explorer',
+                highlight = "Directory",
+                separator = true,
+                text_align = "left",
+            }
+        }
     }
 })
