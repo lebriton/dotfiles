@@ -96,4 +96,5 @@ return require('packer').startup(function(use)
     use('ntpeters/vim-better-whitespace')
     use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
     use('ygm2/rooter.nvim')
+    use('christoomey/vim-tmux-navigator')
 end)
