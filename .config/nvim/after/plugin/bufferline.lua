@@ -2,6 +2,7 @@ vim.opt.termguicolors = true
 bufferline = require("bufferline")
 bufferline.setup({
     options = {
+        mode = "tabs",
         style_preset = bufferline.style_preset.no_italic,
         separator_style = "slant",
         diagnostics = "nvim_lsp",
