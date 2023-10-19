@@ -22,7 +22,7 @@ require("nvim-tree").setup({
     },
     renderer = {
         group_empty = true,
-        highlight_opened_files = 'all',
+        -- highlight_opened_files = 'all',
         special_files = {},
         root_folder_label = function(path)
             return vim.fn.fnamemodify(path, ":t")
