@@ -9,7 +9,13 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  { "christoomey/vim-tmux-navigator", lazy = false },
   {
-    "christoomey/vim-tmux-navigator",
-  }
+    "ntpeters/vim-better-whitespace",
+    lazy = false,
+    config = function()
+      -- vim.g.better_whitespace_operator =
+      vim.g.better_whitespace_guicolor = '#b4637a'  -- https://rosepinetheme.com/palette/
+   end,
+  },
 }

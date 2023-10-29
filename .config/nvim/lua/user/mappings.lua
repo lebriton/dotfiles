@@ -4,37 +4,21 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 return {
-  -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
+    -- General
+    ["x"] = '"_x',  -- do not copy to a register
 
-    -- navigate buffer tabs with `H` and `L`
-    -- L = {
-    --   function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
-    --   desc = "Next buffer",
-    -- },
-    -- H = {
-    --   function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-    --   desc = "Previous buffer",
-    -- },
+    -- Splits
+    ["<leader>s"] = { name = "Splits" },
+    ["<leader>sh"] = { ":vnew<CR>", desc = "Split window left" },
+    ["<leader>sj"] = { ":belowright new<CR>", desc = "Split window down" },
+    ["<leader>sk"] = { ":vnew<CR>", desc = "Split window up" },
+    ["<leader>sl"] = { ":belowright vnew<CR>", desc = "Split window right" },
+    ["<leader>se"] = { "<C-w>=", desc = "Make split windows equal width"},
 
-    -- mappings seen under group name "Buffer"
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(
-          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
-        )
-      end,
-      desc = "Pick to close",
-    },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
+    -- Buffers
     ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-  },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<leader>bn"] = { ":bnext<CR>", desc = "Next buffer" },
+    ["<leader>bp"] = { ":bprev<CR>", desc = "Previous buffer" },
   },
 }
