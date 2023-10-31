@@ -9,7 +9,7 @@ return {
         dependencies = { 'nvim-lua/plenary.nvim' },
         keys = {
             { "<leader>f:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
-            { "<leader>f<CR>", function() require("telescope.builtin").resume() end, desc = "Resume PRevious Search" },
+            { "<leader>f<CR>", function() require("telescope.builtin").resume() end, desc = "Resume Previous Search" },
             { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find Buffers" },
             { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
             { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
