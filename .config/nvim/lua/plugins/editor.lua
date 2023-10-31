@@ -39,11 +39,7 @@ return {
         "yamatsum/nvim-cursorline",
         config = function()
             require('nvim-cursorline').setup {
-                cursorline = {
-                    enable = true,
-                    timeout = 1000,
-                    number = false,
-                },
+                cursorline = { enable = false },
                 cursorword = {
                     enable = true,
                     min_length = 3,
