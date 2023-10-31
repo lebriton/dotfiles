@@ -1,0 +1,7 @@
+return {
+    {
+        "",
+        config = function()
+        end,
+    },
+}

@@ -1,7 +1,7 @@
 return {
     {
         "lewis6991/gitsigns.nvim",
-        event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+        event = "LazyFile", 
         opts = {
             signs = {
                 add = { text = "▎" },
@@ -15,8 +15,8 @@ return {
         keys = {
             { "<leader>gb", "<cmd>Gitsigns blame_line<cr>", desc = "Blame line" },
             { "<leader>gh", "<cmd>Gitsigns preview_hunk_inline<cr>", desc = "Preview hunk" },
-            { "<leader>gH", "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset hunk" },
-            { "<leader>gr", "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset buffer" },
+            { "<leader>gr", "<cmd>Gitsigns reset_hunk<cr>", desc = "Reset hunk" },
+            { "<leader>gR", "<cmd>Gitsigns reset_buffer<cr>", desc = "Reset buffer" },
         },
     },
 }
