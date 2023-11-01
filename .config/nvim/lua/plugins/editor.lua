@@ -105,4 +105,15 @@ return {
             "rcarriga/nvim-notify",
         },
     },
+
+    {
+        'Wansmer/treesj',
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        opts = {
+              use_default_keymaps = false,
+        },
+        keys = {
+            { '<leader>j', '<cmd>lua require("treesj").toggle()<cr>', desc = "Join code block (toggle)" },
+        },
+    }
 }
