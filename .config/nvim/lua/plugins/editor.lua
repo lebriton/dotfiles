@@ -15,6 +15,7 @@ return {
             { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
             { "<leader>fh", "<cmd>Telescope oldfiles<cr>", desc = "Find history" },
             { "<leader>fm", "<cmd>Telescope man_pages<cr>", desc = "Find man pages" },
+            { "<leader>fs", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Find symbols" },
 
             { "<leader>gc", "<cmd>Telescope git_branches<cr>", desc = "Git branches" },
             { "<leader>gc", "<cmd>Telescope git_commits<cr>", desc = "Git commits" },
@@ -65,4 +66,8 @@ return {
         },
         main = "ibl",
     },
+
+    {
+        'Bekaboo/dropbar.nvim',
+    }
 }

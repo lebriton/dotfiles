@@ -7,4 +7,6 @@ return {
             vim.cmd('colorscheme rose-pine')
         end,
     },
+
+    { 'nvim-tree/nvim-web-devicons' },
 }
