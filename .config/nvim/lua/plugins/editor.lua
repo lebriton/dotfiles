@@ -69,5 +69,40 @@ return {
 
     {
         'Bekaboo/dropbar.nvim',
-    }
+    },
+
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+            presets = {
+                command_palette = true, -- position the cmdline and popupmenu together
+                long_message_to_split = true, -- long messages will be sent to a split
+                inc_rename = false, -- enables an input dialog for inc-rename.nvim
+                lsp_doc_border = false, -- add a border to hover docs and signature help
+            },
+            cmdline = {
+                format = {
+                    command = { pattern = "^:", icon = ":", lang = "vim" },
+                    search_down = { kind = "search", pattern = "^/", icon = "/", lang = "regex" },
+                    search_up = { kind = "search", pattern = "^%?", icon = "?", lang = "regex" },
+                    bash = { pattern = "^:%s*!", icon = ":!", lang = "bash" },
+                    help = { pattern = "^:%s*he?l?p?%s+", icon = ":help" },
+                    input = {}, -- Used by input()
+                    -- lua = false, -- to disable a format, set to `false`
+                },
+            },
+            messages = {
+                view_search = false,
+            },
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
+        },
+    },
 }
