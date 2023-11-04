@@ -1,4 +1,152 @@
 {
-    "workbench.colorTheme": "Rosé Pine Moon",
-    "workbench.iconTheme": "rose-pine-icons"
+  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "material-product-icons",
+  "editor.fontFamily": "'Hack', 'monospace', monospace",
+  "files.insertFinalNewline": true,
+  "vim.leader": "<space>",
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    }
+  ],
+  "whichkey.bindings": [
+    {
+      "key": "'",
+      "name": "Show terminal",
+      "type": "command",
+      "command": "workbench.action.terminal.focus"
+    },
+    {
+      "key": "b",
+      "name": "Buffers…",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "d",
+          "name": "Close buffer",
+          "type": "command",
+          "command": "workbench.action.closeActiveEditor"
+        },
+        {
+          "key": "h",
+          "name": "Move buffer into left window",
+          "type": "command",
+          "command": "workbench.action.moveEditorToLeftGroup"
+        },
+        {
+          "key": "j",
+          "name": "Move buffer into below window",
+          "type": "command",
+          "command": "workbench.action.moveEditorToBelowGroup"
+        },
+        {
+          "key": "k",
+          "name": "Move buffer into above window",
+          "type": "command",
+          "command": "workbench.action.moveEditorToAboveGroup"
+        },
+        {
+          "key": "l",
+          "name": "Move buffer into right window",
+          "type": "command",
+          "command": "workbench.action.moveEditorToRightGroup"
+        },
+        {
+          "key": "n",
+          "name": "Next buffer",
+          "type": "command",
+          "command": "workbench.action.nextEditor"
+        },
+        {
+          "key": "p",
+          "name": "Previous buffer",
+          "type": "command",
+          "command": "workbench.action.previousEditor"
+        },
+      ]
+    },
+    {
+      "key": "e",
+      "name": "Explorer",
+      "type": "command",
+      "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+      "key": "f",
+      "name": "Find/Files…",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "*",
+          "name": "Find selection",
+          "type": "command",
+          "commands": [
+            "editor.action.addSelectionToNextFindMatch",
+            "workbench.action.findInFiles",
+            "search.action.focusSearchList"
+          ]
+        },
+        {
+          "key": ":",
+          "name": "Command history",
+          "type": "command",
+          "command": "workbench.action.files.openFileFolder"
+        },
+        {
+          "key": "b",
+          "name": "Find buffer",
+          "type": "command",
+          "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+        },
+        {
+          "key": "f",
+          "name": "Find file",
+          "type": "command",
+          "command": "workbench.action.quickOpen"
+        },
+        {
+          "key": "h",
+          "name": "Find history",
+          "type": "command",
+          "command": "workbench.action.openRecent"
+        },
+        {
+          "key": "p",
+          "name": "Find projects",
+          "type": "command",
+          "command": "workbench.action.openRecent"
+        },
+        {
+          "key": "s",
+          "name": "Find symbols",
+          "type": "command",
+          "command": "workbench.action.showAllSymbols"
+        },
+        {
+          "key": "w",
+          "name": "Find word(s)",
+          "type": "command",
+          "command": "workbench.action.findInFiles"
+        },
+      ]
+    }
+  ]
 }
