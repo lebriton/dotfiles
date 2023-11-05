@@ -136,7 +136,7 @@
         },
         {
           "key": "s",
-          "name": "Find symbols",
+          "name": "Find symbol",
           "type": "command",
           "command": "workbench.action.showAllSymbols"
         },
@@ -148,5 +148,7 @@
         },
       ]
     }
-  ]
+  ],
+  "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
+  "terminal.integrated.fontSize": 16
 }
