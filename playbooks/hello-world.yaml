@@ -2,6 +2,11 @@
   hosts: localhost
 
   vars:
+    apt_package_list:
+      - git
+      - tmux
+      - fzf
+      - vim
     vscodium_extension_list:
       - mvllow.rose-pine
       - MS-CEINTL.vscode-language-pack-fr

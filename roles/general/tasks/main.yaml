@@ -4,3 +4,9 @@
     upgrade: yes
     update_cache: yes
     cache_valid_time: 86400  # One day
+
+- name: Install misc. APT packages
+  become: true
+  apt:
+    name: "{{ item }}"
+  loop: "{{ apt_package_list }}"
