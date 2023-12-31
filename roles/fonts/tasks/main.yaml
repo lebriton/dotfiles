@@ -5,6 +5,5 @@
     dest: "~/.local/share/fonts/{{ item }}"
   loop: "{{ font_file_list }}"
 
-
 - name: Clear and regenerate the font cache
   command: fc-cache -f -v
