@@ -1,0 +1,5 @@
+# TODO: copy one file a time
+- name: Copy Bash configuration files
+  copy:
+    src: "./"
+    dest: "{{ ansible_env.HOME }}"

@@ -1,0 +1,22 @@
+- name: Add the VSCodium APT key
+  apt_key:
+    url: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+    keyring: /usr/share/keyrings/vscodium-archive-keyring.gpg
+  become: yes
+
+- name: Add the VSCodium APT repository
+  apt_repository:
+    repo: deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main
+  become: yes
+
+- name: Install VSCodium
+  apt:
+    name: codium
+    update_cache: yes  # since the repo has been added in a previous step
+  become: yes
+
+- name: Install VSCodium extensions
+  ansible.builtin.command: codium --force --install-extension {{ item }}
+  loop: "{{ vscodium_extension_list }}"
+  register: output
+  changed_when: "'is already installed.' not in output.stdout"

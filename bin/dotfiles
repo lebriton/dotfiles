@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+# Constants
+REPO_URL=git@github.com:lebriton/dotfiles.git
+DOTFILES_DIR="$HOME/.dotfiles"
+PLAYBOOK_PATH="$DOTFILES_DIR/playbooks/hello-world.yaml"
+
+# ANSI color codes
+GREEN='\033[1;32m'
+MAGENTA='\033[1;35m'
+CYAN='\033[1;36m'
+RESET='\033[0m'
+
+run_muted_command() {
+    echo -en "≡ ${CYAN}$1... ${RESET}"
+    "${@:2}" >/dev/null 2>&1
+    echo -e "${GREEN}OK${RESET}"
+}
+
+# Ansible installation
+if ! command -v ansible &>/dev/null; then
+    echo -e "\nInstalling ${MAGENTA}Ansible${RESET}...\n"
+    run_muted_command "Including Ansible's PPA" sudo apt-add-repository -y ppa:ansible/ansible
+    run_muted_command "Refreshing the system’s package index" sudo apt-get update
+    run_muted_command "Installing the Ansible package" sudo apt-get install -y ansible
+fi
+ansible_version=$(ansible --version | head -1 | sed 's/ansible //')
+echo -e "\n${MAGENTA}Ansible${RESET} version ${MAGENTA}$ansible_version${RESET} is installed\n"
+
+# Ad hoc Ansible task to install the repo
+#run_muted_command "Cloning/updating the dotfiles repository" ansible localhost --module-name git --args "repo=$REPO_URL dest=$DOTFILES_DIR update=yes"
+latest_commit=$(git -C "$DOTFILES_DIR" log -n 1 --pretty=format:"[%ad] %H %s")
+
+echo
+echo -e "Repository location: ${MAGENTA}$DOTFILES_DIR${RESET}"
+echo -e "Latest commit: ${MAGENTA}$latest_commit${RESET}"
+
+echo -e "\n🚀 Invoking the ${MAGENTA}playbook lord${RESET}...\n"
+
+# Run the main playbook
+ansible-playbook "$PLAYBOOK_PATH"

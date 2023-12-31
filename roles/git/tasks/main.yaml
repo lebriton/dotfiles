@@ -1,0 +1,10 @@
+- name: Install Git
+  apt:
+    name: git
+  become: yes
+
+# TODO: ask for user and email
+- name: Copy Git configuration files
+  copy:
+    src: "./"
+    dest: "{{ ansible_env.HOME }}"
