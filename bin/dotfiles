@@ -30,7 +30,7 @@ ansible_version=$(ansible --version | head -1 | sed 's/ansible //')
 echo -e "\n${MAGENTA}Ansible${RESET} version ${MAGENTA}$ansible_version${RESET} is installed\n"
 
 # Ad hoc Ansible task to install the repo
-#run_muted_command "Cloning/updating the dotfiles repository" ansible localhost --module-name git --args "repo=$REPO_URL dest=$DOTFILES_DIR update=yes"
+run_muted_command "Cloning/updating the dotfiles repository" ansible localhost --module-name git --args "repo=$REPO_URL dest=$DOTFILES_DIR update=yes"
 latest_commit=$(git -C "$DOTFILES_DIR" log -n 1 --pretty=format:"[%ad] %H %s")
 
 echo
