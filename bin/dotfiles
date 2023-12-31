@@ -40,4 +40,5 @@ echo -e "Latest commit: ${MAGENTA}$latest_commit${RESET}"
 echo -e "\n🚀 Invoking the ${MAGENTA}playbook lord${RESET}...\n"
 
 # Run the main playbook
+cd "$DOTFILES_DIR"
 ansible-playbook "$PLAYBOOK_PATH"

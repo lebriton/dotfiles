@@ -1,7 +1,7 @@
 - name: Hello, World!
   hosts: localhost
 
-  vars: 
+  vars:
     vscodium_extension_list:
       - mvllow.rose-pine
       - MS-CEINTL.vscode-language-pack-fr

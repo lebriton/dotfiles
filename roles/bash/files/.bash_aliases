@@ -24,8 +24,6 @@ mkcd () {
 }
 
 alias c='codium'
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias dot='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias d='docker'
 alias dc='docker-compose'
 alias n='nvim'
