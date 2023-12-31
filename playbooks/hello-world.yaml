@@ -1,12 +1,31 @@
 - name: Hello, World!
   hosts: localhost
 
+  roles:
+    - general
+    - bash
+    - tmux
+    - git
+    - vscodium
+    - fonts
+
   vars:
     apt_package_list:
       - git
       - tmux
       - fzf
       - vim
+    font_file_list:
+      # Hack
+      - Hack-Bold.ttf
+      - Hack-BoldItalic.ttf
+      - Hack-Italic.ttf
+      - Hack-Regular.ttf
+      # UbuntuMonoNerdFontMono
+      - UbuntuMonoNerdFontMono-Bold.ttf
+      - UbuntuMonoNerdFontMono-BoldItalic.ttf
+      - UbuntuMonoNerdFontMono-Italic.ttf
+      - UbuntuMonoNerdFontMono-Regular.ttf
     vscodium_extension_list:
       - mvllow.rose-pine
       - MS-CEINTL.vscode-language-pack-fr
@@ -14,10 +33,3 @@
       - PKief.material-product-icons
       - vscodevim.vim
       - VSpaceCode.whichkey
-
-  roles:
-    - general
-    - bash
-    - tmux
-    - git
-    - vscodium
