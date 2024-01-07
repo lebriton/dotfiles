@@ -31,12 +31,12 @@
       - UbuntuMonoNerdFontMono-Regular.ttf
 
     firefox_extension_list:
-      # Firefox Multi-Account Containers
       - https://addons.mozilla.org/fr/firefox/addon/multi-account-containers/
-      # Adblock Plus
       - https://addons.mozilla.org/fr/firefox/addon/adblock-plus/
-      # Wappalyzer
       - https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
+      - https://addons.mozilla.org/fr/firefox/addon/duckduckgo-for-firefox/
+      - https://addons.mozilla.org/fr/firefox/addon/consent-o-matic/
+      - https://addons.mozilla.org/fr/firefox/addon/clearurls/
 
     vscodium_extension_list:
       - mvllow.rose-pine
