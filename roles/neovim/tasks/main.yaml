@@ -1,0 +1,34 @@
+- name: Ensure old neovim from repository is absent
+  apt:
+    name: neovim
+    state: absent
+  become: true
+
+# https://github.com/neovim/neovim/blob/master/INSTALL.md#install-from-source
+- name: Install neovim build dependencies
+  apt:
+    name:
+      - ninja-build
+      - gettext
+      - cmake
+      - unzip
+      - curl
+  become: true
+
+- name: Sync the neovim repository
+  git:
+    repo: https://github.com/neovim/neovim
+    dest: "{{ build_root_dir }}/neovim"
+    version: stable
+
+- name: Build neovim
+  shell: make CMAKE_BUILD_TYPE=Release
+  args:
+    chdir: "{{ build_root_dir }}/neovim"
+
+- name: Install neovim
+  shell: make install
+  args:
+    chdir: "{{ build_root_dir }}/neovim"
+  become: true
+

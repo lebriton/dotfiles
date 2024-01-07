@@ -12,3 +12,13 @@
   apt:
     name: "{{ item }}"
   loop: "{{ apt_package_list }}"
+
+- name: Create the root directory to store the build-from-source software source code
+  file:
+    path: "{{ build_root_dir }}"
+    state: directory
+    owner: "{{ ansible_user_uid }}"
+    group: "{{ ansible_user_gid }}"
+  become: true
+
+

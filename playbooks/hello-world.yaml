@@ -7,14 +7,12 @@
     - tmux
     - git
     - vscodium
+    - neovim
     - fonts
 
   vars:
     apt_package_list:
-      - git
-      - tmux
       - fzf
-      - vim
     font_file_list:
       # Hack
       - Hack-Bold.ttf
@@ -26,6 +24,7 @@
       - UbuntuMonoNerdFontMono-BoldItalic.ttf
       - UbuntuMonoNerdFontMono-Italic.ttf
       - UbuntuMonoNerdFontMono-Regular.ttf
+    build_root_dir: /usr/src/bryton
     vscodium_extension_list:
       - mvllow.rose-pine
       - MS-CEINTL.vscode-language-pack-fr
