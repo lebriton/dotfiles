@@ -1,0 +1,17 @@
+- name: Install Firefox
+  apt:
+    name: firefox
+  become: yes
+
+- name: Find the Firefox extensions root directory
+  find:
+    file_type: directory
+    paths: "{{ ansible_env.HOME }}/.mozilla/firefox"
+    patterns: (.*).default-release
+    use_regex: yes
+  register: firefox_release_dir
+
+# Not very ergonomic, but no convenient alternative seems to be available
+- name: Ask the user to install Firefox extensions manually
+  command: "firefox {{ item }}"
+  loop: "{{ firefox_extension_list }}"

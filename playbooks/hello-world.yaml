@@ -8,12 +8,16 @@
     - git
     - vscodium
     - neovim
+    - firefox
     - fonts
 
   vars:
     apt_package_list:
       - fzf
+      - npm
+
     build_root_dir: /usr/src/bryton
+
     font_file_list:
       # Hack
       - Hack-Bold.ttf
@@ -25,6 +29,15 @@
       - UbuntuMonoNerdFontMono-BoldItalic.ttf
       - UbuntuMonoNerdFontMono-Italic.ttf
       - UbuntuMonoNerdFontMono-Regular.ttf
+
+    firefox_extension_list:
+      # Firefox Multi-Account Containers
+      - https://addons.mozilla.org/fr/firefox/addon/multi-account-containers/
+      # Adblock Plus
+      - https://addons.mozilla.org/fr/firefox/addon/adblock-plus/
+      # Wappalyzer
+      - https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
+
     vscodium_extension_list:
       - mvllow.rose-pine
       - MS-CEINTL.vscode-language-pack-fr
