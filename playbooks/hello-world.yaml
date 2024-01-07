@@ -9,12 +9,15 @@
     - vscodium
     - neovim
     - firefox
+    - ulauncher
     - fonts
 
   vars:
     apt_package_list:
       - fzf
       - npm
+      - python3
+      - python3-pip
 
     build_root_dir: /usr/src/bryton
 

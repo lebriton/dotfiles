@@ -1,0 +1,15 @@
+# TODO: idempotent
+- name: Enable APT universe repository
+  command: add-apt-repository universe -y
+  become: yes
+
+- name: Add the Ulauncher APT repository
+  apt_repository:
+    repo: ppa:agornostal/ulauncher
+  become: yes
+
+- name: Install Ulauncher
+  apt:
+    name: ulauncher
+    update_cache: yes  # since the repo has been added in a previous step
+  become: yes
