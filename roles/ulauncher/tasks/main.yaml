@@ -13,3 +13,8 @@
     name: ulauncher
     update_cache: yes  # since the repo has been added in a previous step
   become: yes
+
+- name: Copy Ulauncher settings file
+  copy:
+    src: settings.json
+    dest: ~/.config/ulauncher/settings.json
