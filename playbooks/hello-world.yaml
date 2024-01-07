@@ -13,6 +13,7 @@
   vars:
     apt_package_list:
       - fzf
+    build_root_dir: /usr/src/bryton
     font_file_list:
       # Hack
       - Hack-Bold.ttf
@@ -24,7 +25,6 @@
       - UbuntuMonoNerdFontMono-BoldItalic.ttf
       - UbuntuMonoNerdFontMono-Italic.ttf
       - UbuntuMonoNerdFontMono-Regular.ttf
-    build_root_dir: /usr/src/bryton
     vscodium_extension_list:
       - mvllow.rose-pine
       - MS-CEINTL.vscode-language-pack-fr
