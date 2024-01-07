@@ -4,6 +4,9 @@
     url: "https://github.com/lebriton/fonts/raw/main/{{ item }}"
     dest: "~/.local/share/fonts/{{ item }}"
   loop: "{{ font_file_list }}"
+  ignore_errors: true
+  register: font_list
 
 - name: Clear and regenerate the font cache
   command: fc-cache -f -v
+  when: font_list is changed
