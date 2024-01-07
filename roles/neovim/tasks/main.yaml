@@ -20,15 +20,18 @@
     repo: https://github.com/neovim/neovim
     dest: "{{ build_root_dir }}/neovim"
     version: stable
+  register: neovim_src
 
 - name: Build neovim
   shell: make CMAKE_BUILD_TYPE=Release
   args:
     chdir: "{{ build_root_dir }}/neovim"
+  when: neovim_src is changed
 
 - name: Install neovim
   shell: make install
   args:
     chdir: "{{ build_root_dir }}/neovim"
   become: true
+  when: neovim_src is changed
 
