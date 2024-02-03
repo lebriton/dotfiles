@@ -20,3 +20,11 @@
   loop: "{{ vscodium_extension_list }}"
   register: output
   changed_when: "'is already installed.' not in output.stdout"
+
+- name: Copy VSCodium configuration files
+  copy:
+    src: "{{ item }}"
+    dest: "~/.config/VSCodium/User/{{ item }}"
+  loop:
+    - keybindings.json
+    - settings.json
