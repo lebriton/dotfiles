@@ -35,7 +35,7 @@
 
     firefox_extension_list:
       - https://addons.mozilla.org/fr/firefox/addon/multi-account-containers/
-      - https://addons.mozilla.org/fr/firefox/addon/adblock-plus/
+      - https://addons.mozilla.org/fr/firefox/addon/ublock-origin/
       - https://addons.mozilla.org/fr/firefox/addon/wappalyzer/
       - https://addons.mozilla.org/fr/firefox/addon/duckduckgo-for-firefox/
       - https://addons.mozilla.org/fr/firefox/addon/consent-o-matic/
