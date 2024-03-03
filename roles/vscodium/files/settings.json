@@ -150,5 +150,30 @@
     }
   ],
   "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
-  "terminal.integrated.fontSize": 16
+  "terminal.integrated.fontSize": 16,
+
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "rust-analyzer.inlayHints.renderColons": false,
+
+  "emmet.includeLanguages": {
+    "rust": "html",
+    "*.rs": "html"
+  },
+  "tailwindCSS.includeLanguages": {
+      "rust": "html",
+      "*.rs": "html"
+  },
+  "files.associations": {
+      "*.rs": "rust"
+  },
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": true
+  },
+  "css.validate": false,
 }
