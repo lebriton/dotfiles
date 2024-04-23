@@ -20,6 +20,7 @@
     repo: https://github.com/neovim/neovim
     dest: "{{ build_root_dir }}/neovim"
     version: stable
+    force: true
   register: neovim_src
 
 - name: Build neovim
