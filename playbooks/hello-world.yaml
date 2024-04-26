@@ -23,10 +23,10 @@
 
     font_file_list:
       # Hack
-      - Hack-Bold.ttf
-      - Hack-BoldItalic.ttf
-      - Hack-Italic.ttf
-      - Hack-Regular.ttf
+      - HackNerdFontMono-Bold.ttf
+      - HackNerdFontMono-BoldItalic.ttf
+      - HackNerdFontMono-Italic.ttf
+      - HackNerdFontMono-Regular.ttf
       # UbuntuMonoNerdFontMono
       - UbuntuMonoNerdFontMono-Bold.ttf
       - UbuntuMonoNerdFontMono-BoldItalic.ttf

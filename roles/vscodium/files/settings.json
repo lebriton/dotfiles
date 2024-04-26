@@ -2,7 +2,7 @@
   "workbench.colorTheme": "Rosé Pine Moon",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "material-product-icons",
-  "editor.fontFamily": "'Hack', 'monospace', monospace",
+  "editor.fontFamily": "'Hack Nerd Font Mono', 'monospace', monospace",
   "files.insertFinalNewline": true,
   "vim.leader": "<space>",
   "vim.incsearch": true,
@@ -150,7 +150,6 @@
     }
   ],
   "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
-  "terminal.integrated.fontSize": 16,
 
   "rust-analyzer.check.command": "clippy",
   "rust-analyzer.inlayHints.typeHints.enable": false,
@@ -176,4 +175,5 @@
     "strings": true
   },
   "css.validate": false,
+  "terminal.integrated.fontSize": 16,
 }
