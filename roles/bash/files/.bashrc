@@ -51,9 +51,7 @@ stty -ixon
 # set the default text editor
 export EDITOR=nvim
 
+# add binaries to the PATH
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
-# ===
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local

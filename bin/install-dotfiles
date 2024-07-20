@@ -5,7 +5,7 @@ set -Eeuo pipefail
 # Constants
 REPO_URL=git@github.com:lebriton/dotfiles.git
 DOTFILES_DIR="$HOME/.dotfiles"
-PLAYBOOK_PATH="$DOTFILES_DIR/playbooks/hello-world.yaml"
+PLAYBOOK_PATH="$DOTFILES_DIR/playbooks/install.yaml"
 
 # ANSI color codes
 GREEN='\033[1;32m'
