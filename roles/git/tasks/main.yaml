@@ -5,6 +5,7 @@
 
 # TODO: ask for user and email
 - name: Copy Git configuration files
-  copy:
-    src: "./"
-    dest: "{{ ansible_env.HOME }}"
+  include_tasks: "../general/tasks/copy_with_backup.yaml"
+  vars:
+    src: '{{ role_path }}/files/.gitconfig'
+    dest: '~/.gitconfig'

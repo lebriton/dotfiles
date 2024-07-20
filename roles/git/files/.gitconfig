@@ -1,3 +1,8 @@
+#####################################################################
+# WARNING: This file is managed by Ansible.
+# Do not manually edit this file.
+# Any manual changes will be overwritten the next time Ansible runs.
+#####################################################################
 [user]
   email = hello@brytonlacquement.com
   name = Bryton Lacquement
@@ -32,3 +37,9 @@
   who = shortlog -sne
   wip = commit -am WIP --no-verify
   yolo = push --force
+
+#####################################################################
+# WARNING: This file is managed by Ansible.
+# Do not manually edit this file.
+# Any manual changes will be overwritten the next time Ansible runs.
+#####################################################################

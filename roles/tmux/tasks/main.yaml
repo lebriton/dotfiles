@@ -9,9 +9,10 @@
     dest: ~/.tmux/plugins/tpm
 
 - name: Copy Tmux configuration files
-  copy:
-    src: "./"
-    dest: "{{ ansible_env.HOME }}"
+  include_tasks: "../general/tasks/copy_with_backup.yaml"
+  vars:
+    src: '{{ role_path }}/files/.tmux.conf'
+    dest: '~/.tmux.conf'
 
 # https://github.com/tmux-plugins/tpm/issues/6
 - name: Install Tmux plugins

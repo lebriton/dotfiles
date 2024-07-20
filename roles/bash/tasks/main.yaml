@@ -1,5 +1,17 @@
-# TODO: copy one file a time
-- name: Copy Bash configuration files
+- name: Copy Bash configuration files (part 1)
+  include_tasks: "../general/tasks/copy_with_backup.yaml"
+  loop:
+    - { src: '{{ role_path }}/files/.bash_aliases', dest: '~/.bash_aliases' }
+    - { src: '{{ role_path }}/files/.bash_bindings', dest: '~/.bash_bindings' }
+    - { src: '{{ role_path }}/files/.bashrc', dest: '~/.bashrc' }
+  vars:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    
+- name: Copy Bash configuration files (part 2)
   copy:
-    src: "./"
-    dest: "{{ ansible_env.HOME }}"
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - { src: '{{ role_path }}/files/.bash_git', dest: '~/.bash_git' }
+    - { src: '{{ role_path }}/files/.sensible.bash', dest: '~/.sensible.bash' }

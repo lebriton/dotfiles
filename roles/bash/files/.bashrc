@@ -1,3 +1,8 @@
+#####################################################################
+# WARNING: This file is managed by Ansible.
+# Do not manually edit this file.
+# Any manual changes will be overwritten the next time Ansible runs.
+#####################################################################
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -55,3 +60,9 @@ export EDITOR=nvim
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
+
+#####################################################################
+# WARNING: This file is managed by Ansible.
+# Do not manually edit this file.
+# Any manual changes will be overwritten the next time Ansible runs.
+#####################################################################

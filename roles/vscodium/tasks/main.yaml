@@ -22,9 +22,10 @@
   changed_when: "'is already installed.' not in output.stdout"
 
 - name: Copy VSCodium configuration files
-  copy:
-    src: "{{ item }}"
-    dest: "~/.config/VSCodium/User/{{ item }}"
+  include_tasks: "../general/tasks/copy_with_backup.yaml"
   loop:
     - keybindings.json
     - settings.json
+  vars:
+    src: "{{ role_path}}/files/{{ item }}"
+    dest: "~/.config/VSCodium/User/{{ item }}"

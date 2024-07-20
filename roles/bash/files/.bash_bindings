@@ -1,2 +1,13 @@
+#####################################################################
+# WARNING: This file is managed by Ansible.
+# Do not manually edit this file.
+# Any manual changes will be overwritten the next time Ansible runs.
+#####################################################################
 # vim:syntax=bash
 bind -x '"\C-f":"~/bin/tmux-sessionizer"'
+
+#####################################################################
+# WARNING: This file is managed by Ansible.
+# Do not manually edit this file.
+# Any manual changes will be overwritten the next time Ansible runs.
+#####################################################################
