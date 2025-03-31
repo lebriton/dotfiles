@@ -1,0 +1,21 @@
+- name: Get the checksum of the source file
+  stat:
+    path: "{{ src }}"
+  register: src_file
+
+- name: Get the checksum of the destination file
+  stat:
+    path: "{{ dest }}"
+  register: dest_file
+  ignore_errors: yes  # Handle cases where the destination file might not exist yet
+
+- name: Determine if files differ
+  set_fact:
+    files_differ: "{{ src_file.stat.checksum != dest_file.stat.checksum or dest_file.stat.exists == False }}"
+
+- name: Backup the destination file and copy if files differ
+  copy:
+    src: "{{ src }}"
+    dest: "{{ dest }}"
+    backup: "{{ files_differ | ternary('yes', 'no') }}"
+  when: files_differ
